@@ -5,50 +5,34 @@ import { useRouter, usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Form from "./Form";
-import CanadaPR from "./CanadaPR";
-import Australiapr from "./Australiapr";
-import UKpr from "./UKpr";
-import Newzelandpr from "./Newzelandpr";
-import Germanybluecard from "./Germanybluecard";
-import Usagreencard from "./Usagreencard";
 
 const visaData = [
-  {
-    name: "Canada Permanent Residency Visa",
-    path: "/PR-visas/canadapr",
-    image: "/canadapr.webp",
-  },
-  {
-    name: "Australia Permanent Residency Visa",
-    path: "/PR-visas/australiapr",
-    image: "/australia.jpg",
-  },
-  {
-    name: "UK Permanent Residency Visa",
-    path: "/PR-visas/ukpr",
-    image: "/dmbusi.jpg",
-  },
-  {
-    name: "New Zealand Permanent Residency Visa",
-    path: "/PR-visas/newzelandpr",
-    image: "/nzpr.jpg",
-  },
-  {
-    name: "Germany Blue Card Visa",
-    path: "/PR-visas/germanybluecard",
-    image: "/germanypr.jpg",
-  },
-  {
-    name: "USA Green Card",
-    path: "/PR-visas/usagreencard",
-    image: "/usapr.jpg",
-  },
+  { name: "Study in USA", path: "/studyabroad/usa", image: "/usa1.jpg" },
+  { name: "Study in Uk", path: "/studyabroad/uk", image: "/uk1.webp" },
+  { name: "Study in Canada", path: "/studyabroad/canada", image: "/canada1.jpg" },
+  { name: "Study in Australia", path: "/studyabroad/australia", image: "/aus1.jpg" },
+  { name: "Study in Germany", path: "/studyabroad/germany", image: "/germany.jpg" },
+  { name: "Study in Italy", path: "/studyabroad/italy", image: "/itlay.jpg" },
+  { name: "Study in France", path: "/studyabroad/france", image: "/france.jpg" },
+  { name: "Study in Singapore", path: "/studyabroad/singapore", image: "/singapore.jpg" },
+  { name: "Study in Malaysia", path: "/studyabroad/malaysia", image: "/m.jpg" },
+  { name: "Study in South Africa", path: "/studyabroad/southafrica", image: "/sa.webp" },
+  { name: "Study in New Zealand", path: "/studyabroad/newzealand", image: "/nz.webp" },
+  { name: "Study in Philippiness", path: "/studyabroad/philippiness", image: "/p.jpg" },
+  { name: "Study in Poland", path: "/studyabroad/poland", image: "/pol.webp" },
+  { name: "Study in Ireland", path: "/studyabroad/ireland", image: "/ir.jpg" },
+  { name: "Study in Spain", path: "/studyabroad/spain", image: "/spa.avif" },
+  { name: "Study in Netherlands", path: "/studyabroad/netherlands", image: "/net.webp" },
+  { name: "Study in Switzerland", path: "/studyabroad/switerland", image: "/sw.webp" },
+  { name: "Study in Denmark", path: "/studyabroad/denmark", image: "/de.jpg" },
+  { name: "Study in Dubai", path: "/studyabroad/Dubai", image: "/du.webp" },
+  { name: "Study in Luxembourg", path: "/studyabroad/luxembourg", image: "/lux.jpg" },
 ];
 
 const defaultVisa = {
-  name: "Permanent Residency Visa",
-  path: "/PR-visas",
-  image: "/1.jpg",
+  name: "Study Abroad with VJC",
+  path: "/studyabroad",
+  image: "/study-default.jpg",
 };
 
 const Migrate = () => {
@@ -90,7 +74,7 @@ const Migrate = () => {
                 {selectedVisa.name}
               </h1>
               <p className="mt-4 text-base sm:text-lg lg:text-xl max-w-xl">
-                Start your migration journey with the right Permanent Residency Visa option. Choose your destination and let us guide you.
+                Discover top global destinations to pursue your dreams. Choose your study country and take the first step today!
               </p>
             </motion.div>
 
@@ -103,15 +87,15 @@ const Migrate = () => {
 
       {/* ===== BOTTOM SECTION ===== */}
       <div className="relative z-10 w-full bg-white px-4 sm:px-6 lg:px-12 pt-10 pb-16">
-        <div className="flex justify-center md:justify-start mb-8 ml-0 md:ml-16">
+        <div className="flex justify-center md:justify-start mb-8 ml-0 ml-11">
           <h2 className="text-3xl font-bold text-gray-800 bg-gradient-to-r from-orange-500 to-black bg-clip-text text-transparent">
-            <span className="block md:text-left text-center">Plan Your Move,</span>
-            <span className="block text-center">Live Your Dream</span>
+            <span className="block md:text-left text-center">Plan Your Study Abroad,</span>
+            <span className="block text-center">Shape Your Future</span>
           </h2>
         </div>
 
         <div className="w-full flex flex-col md:flex-row gap-8 md:gap-10 items-start">
-          {/* Visa Buttons Section */}
+          {/* Study Destination Buttons Section */}
           <div className="w-full md:w-1/3">
             {visaData.map((visa) => (
               <div key={visa.path} className="mb-4 w-full">
@@ -130,30 +114,18 @@ const Migrate = () => {
             ))}
           </div>
 
-          {/* Visa Info Content Box */}
+          {/* Study Info Content Box */}
           <div
             className="w-full md:w-2/3 p-4 md:p-6 rounded-xl border border-gray-300 shadow-md relative md:-mt-32 sm:-mt-20 mt-0"
             style={{ maxHeight: "700px", minHeight: "450px", overflowY: "auto" }}
           >
             {selectedVisa.path === defaultVisa.path ? (
               <div className="text-gray-700 text-lg leading-relaxed">
-                Please select a visa type from the left to view more detailed information about that particular Permanent Residency visa.
+                Please select a country from the left to view more detailed study abroad information.
               </div>
-            ) : selectedVisa.path === "/PR-visas/canadapr" ? (
-              <CanadaPR />
-            ) : selectedVisa.path === "/PR-visas/australiapr" ? (
-              <Australiapr />
-            ) : selectedVisa.path === "/PR-visas/ukpr" ? (
-              <UKpr />
-            ) : selectedVisa.path === "/PR-visas/newzelandpr" ? (
-              <Newzelandpr />
-            ) : selectedVisa.path === "/PR-visas/germanybluecard" ? (
-              <Germanybluecard />
-            ) : selectedVisa.path === "/PR-visas/usagreencard" ? (
-              <Usagreencard />
             ) : (
               <div className="text-gray-700 text-lg leading-relaxed">
-                Information about <strong>{selectedVisa.name}</strong> will be displayed here.
+                <strong>{selectedVisa.name}</strong> content goes here. You can replace this section with a dynamic import or component later.
               </div>
             )}
           </div>

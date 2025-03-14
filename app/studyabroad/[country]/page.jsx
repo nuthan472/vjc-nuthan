@@ -29,7 +29,7 @@ const ContactPage = () => {
       </div>
 
       {/* Main Section */}
-     
+      
       {/* Other Sections */}
       <Two />
       <Footer />
