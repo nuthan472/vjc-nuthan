@@ -37,23 +37,23 @@ const Why = () => {
     {
       year: "2022",
       title: "India’s Most Trusted Brand of the Year – Delhi",
-      image: "/path/to/award-image-2022.png"
+      image: "/vjc22.jpg"
     },
     {
       year: "2023",
       title: "India’s Most Trusted Brand of the Year – Delhi",
-      image: "/path/to/award-image-2023.png"
+      image: "/vjc23.jpg"
     },
     {
       year: "2024",
       title: "India’s Most Trusted Brand of the Year – Bengaluru",
-      image: "/path/to/award-image-2024.png"
+      image: "/vjc24.jpg"
     }
   ];
 
   return (
     <>
-      <div className='h-[80rem] lg:h-fit mb-0 md:mb-0 lg:mb-0 tablet:mb-20'>
+      <div className='h-[80rem] lg:h-fit mt-36 mb-0 md:mb-0 lg:mb-0 tablet:mb-20'>
         <h2 className="text-[2.50rem] font-semibold mt-6 uppercase text-center mb-6 text-dark">
           Why To Choose <span className='text-saffron'>Vjc Overseas?</span>
         </h2>
@@ -104,7 +104,7 @@ const Why = () => {
                  <Image 
                   src={award.image} 
                   alt={award.title} 
-                  width={128} 
+                  width={136} 
                   height={128} 
                   className="w-32 h-32 object-cover rounded-full mb-4"
                   priority 

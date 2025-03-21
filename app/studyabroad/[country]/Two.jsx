@@ -5,9 +5,15 @@ import { useRouter, usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Form from "./Form";
-
+import USAStudyVisa from "./USAStudyVisa";
+import UAEStudyVisa from "./UAEStudyVisa"
+import CanadaStudyVisa from "./CanadaStudyVisa";
+import AustraliaStudyVisa from "./AustraliaStudyVisa";
+import UKStudyVisa from "./UKStudyVisa";
+import NZStudyVisa from "./NZStudyVisa";
+import HongStudyVisa from "./HongStudyVisa";
 const visaData = [
-  { name: "Study in USA", path: "/studyabroad/usa", image: "/usa1.jpg" },
+  { name: "Study in USA", path: "/studyabroad/usa", image: "/usa1.jpg" ,component:"./USAStudyVisa"},
   { name: "Study in Uk", path: "/studyabroad/uk", image: "/uk1.webp" },
   { name: "Study in Canada", path: "/studyabroad/canada", image: "/canada1.jpg" },
   { name: "Study in Australia", path: "/studyabroad/australia", image: "/aus1.jpg" },
@@ -27,6 +33,8 @@ const visaData = [
   { name: "Study in Denmark", path: "/studyabroad/denmark", image: "/de.jpg" },
   { name: "Study in Dubai", path: "/studyabroad/Dubai", image: "/du.webp" },
   { name: "Study in Luxembourg", path: "/studyabroad/luxembourg", image: "/lux.jpg" },
+  { name: "Study in Hongkong", path: "/studyabroad/hongkong", image: "/hk.jpg" },
+  { name: "Study in UAE", path: "/studyabroad/uae", image: "/ua.jpg" },
 ];
 
 const defaultVisa = {
@@ -114,21 +122,33 @@ const Migrate = () => {
             ))}
           </div>
 
-          {/* Study Info Content Box */}
-          <div
-            className="w-full md:w-2/3 p-4 md:p-6 rounded-xl border border-gray-300 shadow-md relative md:-mt-32 sm:-mt-20 mt-0"
-            style={{ maxHeight: "700px", minHeight: "450px", overflowY: "auto" }}
-          >
-            {selectedVisa.path === defaultVisa.path ? (
-              <div className="text-gray-700 text-lg leading-relaxed">
-                Please select a country from the left to view more detailed study abroad information.
-              </div>
-            ) : (
-              <div className="text-gray-700 text-lg leading-relaxed">
-                <strong>{selectedVisa.name}</strong> content goes here. You can replace this section with a dynamic import or component later.
-              </div>
-            )}
-          </div>
+{/* Visa Info Content Box */}
+<div
+  className="w-full md:w-2/3 p-4 md:p-6 rounded-xl border border-gray-300 shadow-md relative"
+  style={{ maxHeight: "700px", minHeight: "1550px", overflowY: "auto" }}
+>
+  {selectedVisa.name === "Study in USA" ? (
+    <USAStudyVisa />
+  ) : selectedVisa.name === "Study in Canada" ? (
+    <CanadaStudyVisa />
+  ) : selectedVisa.name === "Study in Australia" ? (
+    <AustraliaStudyVisa />
+  ) : selectedVisa.name === "Study in Uk" ? (
+    <UKStudyVisa />
+  ) : selectedVisa.name === "Study in New Zealand" ? (
+    <NZStudyVisa />
+  ) : selectedVisa.name === "Study in Hongkong" ? (
+    <HongStudyVisa />
+  ) : selectedVisa.name === "Study in UAE" ? (
+    <UAEStudyVisa />
+  ) : (
+    <div className="text-gray-700 text-lg leading-relaxed">
+      Please select a visa type from the left to view more details.
+    </div>
+  )}
+</div>
+
+
         </div>
       </div>
     </div>

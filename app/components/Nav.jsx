@@ -16,17 +16,19 @@ const Navbar = () => {
 
   const menuItems = [
     { name: "Home", path: "/" },
-    { name: "About us", path: "/about-us" },
+    { name: "About us", path: "/about" },
     { name: "Migrate To", path: "/migrate" },
     { name: "Study Abroad", path: "/studyabroad" },
     { name: "PR Visas", path: "/PR-visas" },
-    { name: "Work Abroad", path: "/workvisa" },
-    { name: "Job Seeker Visas", path: "/" },
-    { name: "Visit Visas", path: "/" },
-    { name: "Investor Visas", path: "/" },
+    { name: "Work Abroad", path: "/Workabroad" },
+    { name: "Job Seeker Visas", path: "/Jobseeker" },
+    
+    { name: "Visit Visas", path: "/visitvisas" },
+    { name: "Investor Visas", path: "/Investorvisas" },
     { name: "Schengen Visas", path: "/" },
     { name: "Resume Marketing", path: "/" },
-    { name: "Coaching/Training", path: "/" },
+    { name: "Coaching/Training", path: "/coaching" },
+    { name: "services", path: "/services"},
   ];
 
   const migrateSubPages = [
@@ -40,6 +42,15 @@ const Navbar = () => {
     { name: "Hong Kong", path: "/migrate/hong-kong" },
     { name: "Denmark", path: "/migrate/denmark" },
     { name: "UAE", path: "/migrate/uae" },
+  ];
+  const WorkabroadSubPages = [
+    { name: "Germany Work Permit", path: "/Workabroad/germany-work-permit" },
+    { name: "Canada Work Permit", path: "/Workabroad/canada-work-permit" },
+    { name: "USA H1b Visa", path: "/Workabroad/usa-h1b-visa" },
+    { name: "Australia Work Permit", path: "/Workabroad/australia-work-permit" },
+    { name: "UK Work Permit", path: "/Workabroad/united-kingdom-work-permit" },
+    { name: "Denmark Work Permit", path: "/Workabroad/denmark-work-permit" },
+    { name: "Dubai Work Permit", path: "/Workabroad/dubai-work-permit" },
   ];
 
   const studyabroadSubPages = [
@@ -63,6 +74,8 @@ const Navbar = () => {
     { name: "Denmark", path: "/studyabroad/denmark" },
     { name: "Dubai", path: "/studyabroad/Dubai" },
     { name: "Luxembourg", path: "/studyabroad/luxembourg" },
+    { name: "Hongkong", path: "/studyabroad/hongkong" },
+    { name: "UAE", path: "/studyabroad/uae" },
   ];
 
   const prVisaSubPages = [
@@ -73,6 +86,31 @@ const Navbar = () => {
     { name: "Germany Blue Card Visa", path: "/PR-visas/germanybluecard" },
     { name: "USA Green Card", path: "/PR-visas/usagreencard" },
   ];
+  const Jobseeker = [
+    { name: "Germany Jobseeker Visa", path: "/Jobseeker/germany-jobseeker-visa" },
+    { name: "Austria Jobseeker Visa", path: "/Jobseeker/canada-jobseeker-visa" },
+    { name: "Portugal Jobseeker Visa", path: "/Jobseeker/portugal-jobseeker-visa" },
+    { name: "Sweden Jobseeker Visa", path: "/Jobseeker/sweden-jobseeker-visa" },
+    { name: "Norway Jobseeker Visa", path: "/Jobseeker/norway-jobseeker-visa" },
+    { name: "UAE Jobseeker Visa", path: "/Jobseeker/uae-jobseeker-visa" },
+   
+  ];
+  const visitvisasSubPages = [
+    { name: "USA Visit Visa", path: "/visitvisas/usa-visit-visa" },
+  { name: "USA B1 Visa", path: "/visitvisas/usa-b1-visa" },
+  { name: "USA B2 Visa", path: "/visitvisas/usa-b2-visa" },
+  { name: "USA B1/B2 Visa", path: "/visitvisas/usa-b1-b2-visa" },
+  { name: "Canada Visit Visa", path: "/visitvisas/canada-visit-visa" },
+  { name: "Australia Visit Visa", path: "/visitvisas/australia-visit-visa" },
+  { name: "UK Visit Visa", path: "/visitvisas/uk-visit-visa" },
+  { name: "Dubai Visit Visa", path: "/visitvisas/dubai-visit-visa" },
+  { name: "Denmark Visit Visa", path: "/visitvisas/denmark-visit-visa" },
+  { name: "Austria Visit Visa", path: "/visitvisas/austria-visit-visa" },
+  { name: "Italy Visit Visa", path: "/visitvisas/italy-visit-visa" },
+  { name: "Schengen Visit Visa", path: "/visitvisas/schengen-visit-visa" },
+   
+  ];
+  
 
   return (
     <header>
@@ -157,7 +195,7 @@ const Navbar = () => {
               </Link>
 
               {/* Submenu: Study Abroad (Black background, hover persistent) */}
-              <div className="absolute left-0 mt-3 invisible opacity-0 group-hover:visible group-hover:opacity-100 hover:visible hover:opacity-100 grid grid-cols-5 grid-rows-4 gap-2 bg-black bg-opacity-50 p-3 w-[700px] min-h-[200px] shadow-xl z-50  transition-all duration-300 ease-in-out">
+              <div className="absolute left-0 mt-3 invisible opacity-0 bg-gradient-to-br from-orange-500/60 to-black group-hover:visible group-hover:opacity-100 hover:visible hover:opacity-100 grid grid-cols-5 grid-rows-4 gap-2 bg-black bg-opacity-50 p-3 w-[700px] min-h-[200px] shadow-xl z-50  transition-all duration-300 ease-in-out">
                 {studyabroadSubPages.map((subItem) => (
                   <Link
                     href={subItem.path}
@@ -178,20 +216,33 @@ const Navbar = () => {
                 {item.name}
               </Link>
 
-              {/* Submenu: Migrate To / PR Visas → Vertical List */}
-              {["Migrate To", "PR Visas"].includes(item.name) && (
-                <div className="absolute left-0 hidden group-hover:flex flex-col space-y-2 bg-gray-50 p-3 rounded-lg shadow-lg z-50">
-                  {(item.name === "Migrate To" ? migrateSubPages : prVisaSubPages).map((subItem) => (
-                    <Link
-                      href={subItem.path}
-                      key={subItem.name}
-                      className="text-orange-500 text-sm font-semibold px-4 py-2 rounded-lg hover:bg-orange-200 hover:bg-opacity-30 transition-all ease-in-out whitespace-nowrap"
-                    >
-                      {subItem.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
+              {["Migrate To", "PR Visas", "Job Seeker Visas","Work Abroad","Visit Visas"].includes(item.name) && (
+  <div className="absolute left-0 top-full mt-3 invisible bg-gradient-to-br from-orange-500/60 to-black opacity-0 group-hover:visible group-hover:opacity-100 hover:visible hover:opacity-100 flex flex-col space-y-2 bg-black bg-opacity-50 p-3 shadow-xl z-50 transition-all duration-300 ease-in-out">
+    {(
+      item.name === "Migrate To"
+        ? migrateSubPages
+        :item.name === "Work Abroad"
+        ? WorkabroadSubPages
+        : item.name === "PR Visas"
+        ? prVisaSubPages
+        : item.name === "Visit Visas"
+        ? visitvisasSubPages
+        : item.name === "Job Seeker Visas"
+        ? Jobseeker
+        : [] // Fallback
+    ).map((subItem) => (
+      <Link
+        href={subItem.path}
+        key={subItem.name}
+        className="text-white text-sm font-semibold text-center  px-3 py-2 hover:text-orange-500 hover:bg-white hover:bg-opacity-10 transition duration-200 ease-in-out whitespace-nowrap"
+      >
+        {subItem.name}
+      </Link>
+    ))}
+  </div>
+)}
+
+  
             </div>
           )}
 

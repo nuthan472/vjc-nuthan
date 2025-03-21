@@ -87,12 +87,12 @@ const CompOne = () => {
         animate="onscreen"
         className="flex aspect-square lg:aspect-auto h-[20rem] tablet:h-[30rem] lg:h-[35rem] relative mt-0 tablet:mt-0 md:mt-6 lg:mt-6 z-10 ml-0 md:ml-0 lg:ml-0 tablet:ml-20"
       >
-        <motion.div
-          variants={containerVariants(1)}
-          className="mt-0 lg:mt-10 ml-0 lg:ml-10"
-        >
-          <Form/>
-        </motion.div>
+   <motion.div
+  variants={containerVariants(1)}
+  className="mt-36 lg:mt-24 ml-0 lg:ml-10 w-full max-w-[500px] lg:max-w-[600px] h-auto"
+>
+  <Form />
+</motion.div>
 
       </motion.div>
     </motion.div>
