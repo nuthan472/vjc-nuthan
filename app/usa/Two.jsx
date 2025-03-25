@@ -12,6 +12,7 @@ import AustraliaStudyVisa from "./AustraliaStudyVisa";
 import UKStudyVisa from "./UKStudyVisa";
 import NZStudyVisa from "./NZStudyVisa";
 import HongStudyVisa from "./HongStudyVisa";
+import Germany from "./Germany";
 const visaData = [
   { name: "Study in USA", path: "/studyabroad/usa", image: "/usa1.jpg" ,component:"./USAStudyVisa"},
   { name: "Study in Uk", path: "/studyabroad/uk", image: "/uk1.webp" },
@@ -35,6 +36,8 @@ const visaData = [
   { name: "Study in Luxembourg", path: "/studyabroad/luxembourg", image: "/lux.jpg" },
   { name: "Study in Hongkong", path: "/studyabroad/hongkong", image: "/hk.jpg" },
   { name: "Study in UAE", path: "/studyabroad/uae", image: "/ua.jpg" },
+  { name: "Study in Norway", path: "/studyabroad/norway", image: "/norwaystudy.avif" },
+  { name: "Study in Sweden", path: "/studyabroad/sweden", image: "/swedenstudy.jpg" },
 ];
 
 const defaultVisa = {
@@ -139,6 +142,8 @@ const Migrate = () => {
     <NZStudyVisa />
   ) : selectedVisa.name === "Study in Hongkong" ? (
     <HongStudyVisa />
+  ) : selectedVisa.name === "Study in Germany" ? (
+      <Germany />
   ) : selectedVisa.name === "Study in UAE" ? (
     <UAEStudyVisa />
   ) : (

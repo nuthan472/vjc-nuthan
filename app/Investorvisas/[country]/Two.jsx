@@ -14,19 +14,14 @@ import Usagreencard from "./Usagreencard";
 
 const visaData = [
 
-  { name: "USA Visit Visa", path: "/visitvisas/usa-visit-visa", image: "/usaimg.webp" },
-  { name: "USA B1 Visa", path: "/visitvisas/usa-b1-visa", image: "/visit1.webp" },
-  { name: "USA B2 Visa", path: "/visitvisas/usa-b2-visa", image: "/visit1.webp" },
-  { name: "USA B1/B2 Visa", path: "/visitvisas/usa-b1-b2-visa", image: "/visit1.webp" },
-  { name: "Canada Visit Visa", path: "/visitvisas/canada-visit-visa" , image: "/canada.webp"},
-  { name: "Australia Visit Visa", path: "/visitvisas/australia-visit-visa" , image: "/australiabgimg.jpg"},
-  { name: "UK Visit Visa", path: "/visitvisas/uk-visit-visa" , image: "/uk1.webp"},
-  { name: "Dubai Visit Visa", path: "/visitvisas/dubai-visit-visa", image: "/du.webp" },
-  { name: "Denmark Visit Visa", path: "/visitvisas/denmark-visit-visa", image: "/44.webp" },
-  { name: "Austria Visit Visa", path: "/visitvisas/austria-visit-visa" , image: "/12.webp"},
-  { name: "Italy Visit Visa", path: "/visitvisas/italy-visit-visa", image: "/itlay23.webp" },
-  { name: "Schengen Visit Visa", path: "/visitvisas/schengen-visit-visa", image: "/schengen.webp" },
- 
+  { name: "USA Investor Visa", path: "/Investorvisas/usa-investor-visa", image: "/ausinvestment.webp" },
+  { name: "Canada Investor Visa", path: "/Investorvisas/canada-investor-visa", image: "/canadainvestment.webp" },
+  { name: "Germany Investor Visa", path: "/Investorvisas/germany-investor-visa", image: "/germanyinvestment.webp" },
+  { name: "Australia Investor Visa", path: "/Investorvisas/australia-investor-visa", image: "/Australiainvestment.webp" },
+  { name: "UK Investor Visa", path: "/Investorvisas/uk-investor-visa", image: "/ukinvestment.webp" },
+  { name: "UAE Investor Visa", path: "/Investorvisas/uae-investor-visa", image: "/uaeinvestment.webp" },
+  { name: "Portugal Investor Visa", path: "/Investorvisas/portugal-investor-visa", image: "/portugalinvestment.webp" },
+  { name: "Austria Investor Visa", path: "/Investorvisas/austria-investor-visa", image: "/austriainvest.webp" },
 ];
 const defaultVisa = {
   name: "Permanent Residency Visa",

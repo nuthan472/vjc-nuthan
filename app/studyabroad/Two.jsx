@@ -34,6 +34,8 @@ const visaData = [
   { name: "Study in Luxembourg", path: "/studyabroad/luxembourg", image: "/lux.jpg" },
   { name: "Study in Hongkong", path: "/studyabroad/hongkong", image: "/hk.jpg" },
   { name: "Study in UAE", path: "/studyabroad/uae", image: "/ua.jpg" },
+  { name: "Study in Norway", path: "/studyabroad/norway", image: "/norwaystudy.avif" },
+  { name: "Study in Sweden", path: "/studyabroad/sweden", image: "/swedenstudy.jpg" },
 ];
 
 const defaultVisa = {

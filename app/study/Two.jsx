@@ -13,6 +13,7 @@ import UKStudyVisa from "./UKStudyVisa";
 import NZStudyVisa from "./NZStudyVisa";
 import HongStudyVisa from "./HongStudyVisa";
 import Study from "./Study";
+import Germany from "./Germany";
 const visaData = [
   
   { name: "Study in USA", path: "/studyabroad/usa", image: "/usa1.jpg"},
@@ -37,6 +38,8 @@ const visaData = [
   { name: "Study in Luxembourg", path: "/studyabroad/luxembourg", image: "/lux.jpg" },
   { name: "Study in Hongkong", path: "/studyabroad/hongkong", image: "/hk.jpg" },
   { name: "Study in UAE", path: "/studyabroad/uae", image: "/ua.jpg" },
+  { name: "Study in Norway", path: "/studyabroad/norway", image: "/norwaystudy.avif" },
+  { name: "Study in Sweden", path: "/studyabroad/sweden", image: "/swedenstudy.jpg" },
 ];
 
 const defaultVisa = {
@@ -146,6 +149,8 @@ const Migrate = () => {
     <UAEStudyVisa />
   ) : selectedVisa.name === "Study Abroad with VJC" ? (
     <Study />
+  ) : selectedVisa.name === "Study in Germany" ? (
+    <Germany />
   ) : (
     <div className="text-gray-700 text-lg leading-relaxed">
       Please select a visa type from the left to view more details.

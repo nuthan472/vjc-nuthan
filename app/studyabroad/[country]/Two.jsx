@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { motion } from "framer-motion";
@@ -12,6 +11,24 @@ import AustraliaStudyVisa from "./AustraliaStudyVisa";
 import UKStudyVisa from "./UKStudyVisa";
 import NZStudyVisa from "./NZStudyVisa";
 import HongStudyVisa from "./HongStudyVisa";
+import Germany from "./Germany";
+import Norway from "./Norway";
+import Poland from "./Poland";
+import Switerland from "./Switerland";
+import Sweden from "./Sweden";
+import Spain from "./Spain";
+import Phillipiness from "./Phillipiness";
+import Newzealand from "./Newzealand";
+import Southafrica from "./Southafrica";
+import Singapore from "./Singapore";
+import Malaysia from "./Malaysia";
+import France from "./France";
+import Itlay from "./Itlay";
+import Ireland from "./Ireland";
+import Netherland from "./Netherland";
+import Lux from "./Lux";
+import Dubai from "./Dubai";
+
 const visaData = [
   { name: "Study in USA", path: "/studyabroad/usa", image: "/usa1.jpg" ,component:"./USAStudyVisa"},
   { name: "Study in Uk", path: "/studyabroad/uk", image: "/uk1.webp" },
@@ -35,6 +52,9 @@ const visaData = [
   { name: "Study in Luxembourg", path: "/studyabroad/luxembourg", image: "/lux.jpg" },
   { name: "Study in Hongkong", path: "/studyabroad/hongkong", image: "/hk.jpg" },
   { name: "Study in UAE", path: "/studyabroad/uae", image: "/ua.jpg" },
+  { name: "Study in Norway", path: "/studyabroad/norway", image: "/norwaystudy.avif" },
+  { name: "Study in Sweden", path: "/studyabroad/sweden", image: "/swedenstudy.jpg" },
+
 ];
 
 const defaultVisa = {
@@ -141,6 +161,40 @@ const Migrate = () => {
     <HongStudyVisa />
   ) : selectedVisa.name === "Study in UAE" ? (
     <UAEStudyVisa />
+  ) : selectedVisa.name === "Study in Germany" ? (
+    <Germany />
+  ) : selectedVisa.name === "Study in Norway" ? (
+    <Norway />
+  ) : selectedVisa.name === "Study in Poland" ? (
+    <Poland />
+  ) : selectedVisa.name === "Study in Switzerland" ? (
+    <Switerland />
+  ) : selectedVisa.name === "Study in Sweden" ? (
+    <Sweden />
+  ) : selectedVisa.name === "Study in Spain" ? (
+    <Spain />
+  ) : selectedVisa.name === "Study in Philippiness" ? (
+    <Phillipiness />
+  ) : selectedVisa.name === "Study in New Zealand" ? (
+    <Newzealand />
+  ) : selectedVisa.name === "Study in South Africa" ? (
+    <Southafrica />
+  ) : selectedVisa.name === "Study in Singapore" ? (
+    <Singapore />
+  ) : selectedVisa.name === "Study in Malaysia" ? (
+    <Malaysia />
+  ): selectedVisa.name === "Study in France" ? (
+    <France />
+  ) : selectedVisa.name === "Study in Italy" ? (
+    <Itlay />
+  ) : selectedVisa.name === "Study in Ireland" ? (
+    <Ireland />
+  ) : selectedVisa.name === "Study in Netherlands" ? (
+    <Netherland />
+  ) : selectedVisa.name === "Study in Luxembourg" ? (
+    <Lux />
+  ) : selectedVisa.name === "Study in Dubai" ? (
+    <Dubai />
   ) : (
     <div className="text-gray-700 text-lg leading-relaxed">
       Please select a visa type from the left to view more details.

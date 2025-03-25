@@ -5,16 +5,16 @@ import { useRouter, usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Form from "./Form";
-import CanadaPR from "./CanadaPR";
-import Australiapr from "./Australiapr";
-import UKpr from "./UKpr";
-import Newzelandpr from "./Newzelandpr";
-import Germanybluecard from "./Germanybluecard";
-import Usagreencard from "./Usagreencard";
+import Uae from "./Uae";
+import Norway from "./Norway";
+import Sweden from "./Sweden";
+import Germany from "./Germany";
+import Portugal from "./Portugal";
+import Austria from "./Austria";
 
 const visaData = [
   { name: "Germany Jobseeker Visa", path: "/Jobseeker/germany-jobseeker-visa", image: "/germanyjobseeker.jpg" },
-  { name: "Austria Jobseeker Visa", path: "/Jobseeker/canada-jobseeker-visa", image: "/AustriaJobseekerVisa.jpg" },
+  { name: "Austria Jobseeker Visa", path: "/Jobseeker/austria-jobseeker-visa", image: "/AustriaJobseekerVisa.jpg" },
   { name: "Portugal Jobseeker Visa", path: "/Jobseeker/portugal-jobseeker-visa", image: "/pr.png" },
   { name: "Sweden Jobseeker Visa", path: "/Jobseeker/sweden-jobseeker-visa", image: "/sweden.jpg" },
   { name: "Norway Jobseeker Visa", path: "/Jobseeker/norway-jobseeker-visa", image: "/norway.webp" },
@@ -115,18 +115,18 @@ const Migrate = () => {
               <div className="text-gray-700 text-lg leading-relaxed">
                 Please select a visa type from the left to view more detailed information about that particular Permanent Residency visa.
               </div>
-            ) : selectedVisa.path === "/Jobseeker/USAInvestorVisa" ? (
-              <CanadaPR />
-            ) : selectedVisa.path === "/PR-visas/australiapr" ? (
-              <Australiapr />
-            ) : selectedVisa.path === "/PR-visas/ukpr" ? (
-              <UKpr />
-            ) : selectedVisa.path === "/PR-visas/newzelandpr" ? (
-              <Newzelandpr />
-            ) : selectedVisa.path === "/PR-visas/germanybluecard" ? (
-              <Germanybluecard />
-            ) : selectedVisa.path === "/PR-visas/usagreencard" ? (
-              <Usagreencard />
+            ) : selectedVisa.path === "/Jobseeker/austria-jobseeker-visa" ? (
+              <Austria />
+            ) : selectedVisa.path === "/Jobseeker/sweden-jobseeker-visa" ? (
+              <Sweden />
+            ) : selectedVisa.path === "/Jobseeker/norway-jobseeker-visa" ? (
+              <Norway />
+            ) : selectedVisa.path === "/Jobseeker/uae-jobseeker-visa" ? (
+              <Uae />
+            ) : selectedVisa.path === "/Jobseeker/germany-jobseeker-visa" ? (
+              <Germany />
+            ) : selectedVisa.path === "/Jobseeker/portugal-jobseeker-visa" ? (
+              <Portugal />
             ) : (
               <div className="text-gray-700 text-lg leading-relaxed">
                 Information about <strong>{selectedVisa.name}</strong> will be displayed here.

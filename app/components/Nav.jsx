@@ -26,7 +26,7 @@ const Navbar = () => {
     { name: "Visit Visas", path: "/visitvisas" },
     { name: "Investor Visas", path: "/Investorvisas" },
     { name: "Schengen Visas", path: "/" },
-    { name: "Resume Marketing", path: "/" },
+    { name: "Resume Marketing", path: "/resume-marketing" },
     { name: "Coaching/Training", path: "/coaching" },
     { name: "services", path: "/services"},
   ];
@@ -43,6 +43,7 @@ const Navbar = () => {
     { name: "Denmark", path: "/migrate/denmark" },
     { name: "UAE", path: "/migrate/uae" },
   ];
+   
   const WorkabroadSubPages = [
     { name: "Germany Work Permit", path: "/Workabroad/germany-work-permit" },
     { name: "Canada Work Permit", path: "/Workabroad/canada-work-permit" },
@@ -76,6 +77,8 @@ const Navbar = () => {
     { name: "Luxembourg", path: "/studyabroad/luxembourg" },
     { name: "Hongkong", path: "/studyabroad/hongkong" },
     { name: "UAE", path: "/studyabroad/uae" },
+    { name: " Norway", path: "/studyabroad/norway" },
+    { name: "Sweden", path: "/studyabroad/sweden" },
   ];
 
   const prVisaSubPages = [
@@ -86,6 +89,24 @@ const Navbar = () => {
     { name: "Germany Blue Card Visa", path: "/PR-visas/germanybluecard" },
     { name: "USA Green Card", path: "/PR-visas/usagreencard" },
   ];
+  const resumemarketingSubPages = [
+  
+      { name: "Canada", path: "/resume-marketing/canada-resume-marketing" },
+      { name: "Germany", path: "/resume-marketing/germany-resume-marketing" },
+      { name: "USA", path: "/resume-marketing/usa-resume-marketing" },
+      { name: "Australia", path: "/resume-marketing/australia-resume-marketing" },
+      { name: "UK", path: "/resume-marketing/uk-resume-marketing" },
+      { name: "Denmark", path: "/resume-marketing/denmark-resume-marketing" },
+      { name: "Ireland", path: "/resume-marketing/ireland-resume-marketing" },
+      { name: "Dubai", path: "/resume-marketing/dubai-resume-marketing" },
+      { name: "Austria", path: "/resume-marketing/austria-resume-marketing" },
+      { name: "Singapore", path: "/resume-marketing/singapore-resume-marketing" },
+      { name: "New Zealand", path: "/resume-marketing/new-zealand-resume-marketing" },
+      { name: "Malaysia", path: "/resume-marketing/malaysia-resume-marketing" },
+      {name: "Poland",path: "/resume-marketing/poland-resume-marketing" },
+      { name: "Malta", path: "/resume-marketing/malta-resume-marketing" },
+    
+  ];
   const Jobseeker = [
     { name: "Germany Jobseeker Visa", path: "/Jobseeker/germany-jobseeker-visa" },
     { name: "Austria Jobseeker Visa", path: "/Jobseeker/canada-jobseeker-visa" },
@@ -93,6 +114,17 @@ const Navbar = () => {
     { name: "Sweden Jobseeker Visa", path: "/Jobseeker/sweden-jobseeker-visa" },
     { name: "Norway Jobseeker Visa", path: "/Jobseeker/norway-jobseeker-visa" },
     { name: "UAE Jobseeker Visa", path: "/Jobseeker/uae-jobseeker-visa" },
+   
+  ];
+  const InvestorvisasSubPages = [
+    { name: "USA Investor Visa", path: "/Investorvisas/usa-investor-visa"},
+    { name: "Canada Investor Visa", path: "/Investorvisas/canada-investor-visa"},
+    { name: "Germany Investor Visa", path: "/Investorvisas/germany-investor-visa" },
+    { name: "Australia Investor Visa", path: "/Investorvisas/australia-investor-visa"},
+    { name: "UK Investor Visa", path: "/Investorvisas/uk-investor-visa" },
+    { name: "UAE Investor Visa", path: "/Investorvisas/uae-investor-visa"},
+    { name: "Portugal Investor Visa", path: "/Investorvisas/portugal-investor-visa" },
+    { name: "Austria Investor Visa", path: "/Investorvisas/austria-investor-visa" },
    
   ];
   const visitvisasSubPages = [
@@ -184,9 +216,7 @@ const Navbar = () => {
       {menuItems.map((item, index) => (
         <React.Fragment key={item.name}>
           {item.name === "Study Abroad" ? (
-            // WRAP BOTH LINK & SUBMENU inside one 'group' container to maintain hover state
             <div className="relative group">
-              {/* Main Menu Link */}
               <Link
                 href={item.path}
                 className="text-white text-sm lg:text-xs font-semibold px-3.5 hover:bg-white hover:bg-opacity-20 uppercase mt-2"
@@ -194,13 +224,57 @@ const Navbar = () => {
                 {item.name}
               </Link>
 
-              {/* Submenu: Study Abroad (Black background, hover persistent) */}
-              <div className="absolute left-0 mt-3 invisible opacity-0 bg-gradient-to-br from-orange-500/60 to-black group-hover:visible group-hover:opacity-100 hover:visible hover:opacity-100 grid grid-cols-5 grid-rows-4 gap-2 bg-black bg-opacity-50 p-3 w-[700px] min-h-[200px] shadow-xl z-50  transition-all duration-300 ease-in-out">
+              {/* Study Abroad Submenu */}
+              <div className="absolute left-0 mt-3 invisible opacity-0 bg-gradient-to-br from-orange-500/60 to-black group-hover:visible group-hover:opacity-100 hover:visible hover:opacity-100 grid grid-cols-5 grid-rows-4 gap-2 bg-black bg-opacity-50 p-3 w-[700px] min-h-[200px] shadow-xl z-50 transition-all duration-300 ease-in-out">
                 {studyabroadSubPages.map((subItem) => (
                   <Link
                     href={subItem.path}
                     key={subItem.name}
-                    className="text-white text-sm font-semibold text-center px-3 py-2  hover:text-orange-500 hover:bg-white hover:bg-opacity-10 transition duration-200 ease-in-out whitespace-normal break-words"
+                    className="text-white text-sm font-semibold text-center px-3 py-2 hover:text-orange-500 hover:bg-white hover:bg-opacity-10 transition duration-200 ease-in-out whitespace-normal break-words"
+                  >
+                    {subItem.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ) : item.name === "Resume Marketing" ? (
+            <div className="relative group">
+              <Link
+                href={item.path}
+                className="text-white text-sm lg:text-xs font-semibold px-3.5 hover:bg-white hover:bg-opacity-20 uppercase mt-2"
+              >
+                {item.name}
+              </Link>
+
+              {/* Resume Marketing Submenu - OPEN TO LEFT */}
+              <div className="absolute right-0 mt-3 invisible opacity-0 bg-gradient-to-br from-orange-500/60 to-black group-hover:visible group-hover:opacity-100 hover:visible hover:opacity-100 grid grid-cols-3 gap-2 bg-black bg-opacity-50 p-3 w-[500px] min-h-[150px] shadow-xl z-50 transition-all duration-300 ease-in-out">
+                {resumemarketingSubPages.map((subItem) => (
+                  <Link
+                    href={subItem.path}
+                    key={subItem.name}
+                    className="text-white text-sm font-semibold text-center px-3 py-2 hover:text-orange-500 hover:bg-white hover:bg-opacity-10 transition duration-200 ease-in-out whitespace-normal break-words"
+                  >
+                    {subItem.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ) : item.name === "Visit Visas" ? (
+            <div className="relative group">
+              <Link
+                href={item.path}
+                className="text-white text-sm lg:text-xs font-semibold px-3.5 hover:bg-white hover:bg-opacity-20 uppercase mt-2"
+              >
+                {item.name}
+              </Link>
+
+              {/* Visit Visas Submenu - OPEN TO LEFT */}
+              <div className="absolute right-0 mt-3 invisible opacity-0 bg-gradient-to-br from-orange-500/60 to-black group-hover:visible group-hover:opacity-100 hover:visible hover:opacity-100 grid grid-cols-4 gap-2 bg-black bg-opacity-50 p-3 w-[600px] min-h-[150px] shadow-xl z-50 transition-all duration-300 ease-in-out">
+                {visitvisasSubPages.map((subItem) => (
+                  <Link
+                    href={subItem.path}
+                    key={subItem.name}
+                    className="text-white text-sm font-semibold text-center px-3 py-2 hover:text-orange-500 hover:bg-white hover:bg-opacity-10 transition duration-200 ease-in-out whitespace-normal break-words"
                   >
                     {subItem.name}
                   </Link>
@@ -216,7 +290,7 @@ const Navbar = () => {
                 {item.name}
               </Link>
 
-              {["Migrate To", "PR Visas", "Job Seeker Visas","Work Abroad","Visit Visas"].includes(item.name) && (
+              {["Migrate To", "PR Visas", "Job Seeker Visas","Work Abroad","Investor Visas"].includes(item.name) && (
   <div className="absolute left-0 top-full mt-3 invisible bg-gradient-to-br from-orange-500/60 to-black opacity-0 group-hover:visible group-hover:opacity-100 hover:visible hover:opacity-100 flex flex-col space-y-2 bg-black bg-opacity-50 p-3 shadow-xl z-50 transition-all duration-300 ease-in-out">
     {(
       item.name === "Migrate To"
@@ -225,8 +299,9 @@ const Navbar = () => {
         ? WorkabroadSubPages
         : item.name === "PR Visas"
         ? prVisaSubPages
-        : item.name === "Visit Visas"
-        ? visitvisasSubPages
+      
+        : item.name === "Investor Visas"
+        ? InvestorvisasSubPages
         : item.name === "Job Seeker Visas"
         ? Jobseeker
         : [] // Fallback

@@ -74,7 +74,7 @@ const Migrate = () => {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="bg-white w-full max-w-lg rounded-2xl shadow-2xl p-6 relative"
+            className="bg-white w-full max-w-lg rounded-2xl shadow-2xl p-6 relative max-h-[90vh] overflow-y-auto"
           >
             <button
               className="absolute top-3 right-4 text-black text-xl font-bold hover:text-red-600"
@@ -96,36 +96,64 @@ const Migrate = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="w-full min-h-[80vh] bg-cover bg-center relative flex items-center justify-center"
+          className="w-full h-[90vh] sm:min-h-[90vh] bg-cover bg-center relative flex items-center justify-center"
           style={{ backgroundImage: "url('/harsh.jpg')" }}
         >
           <div className="absolute inset-0 bg-black/30" />
           <div className="relative z-10 text-center text-white px-6">
-            <motion.h1
-              initial={{ y: -40, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1 }}
-              className="text-4xl lg:text-5xl font-bold mb-4"
-            ></motion.h1>
+        
             <motion.p
               initial={{ y: 40, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1.2 }}
               className="text-lg lg:text-xl font-medium"
-            ></motion.p>
+            >
+              {/* Optional Subtitle */}
+            </motion.p>
           </div>
+{/* Floating Info Box - Responsive & Scrollable */}
+<motion.div
+  initial={{ opacity: 0, y: 50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 1, duration: 1 }}
+  className="absolute z-20 w-[92%] max-w-[700px] bg-gray-800 text-white p-5 lg:p-8 overflow-y-auto
+  max-h-[55vh] sm:max-h-[60vh] md:max-h-[65vh] lg:max-h-[60vh] xl:max-h-[65vh]
+  left-4 sm:left-4 md:left-1/2 md:transform md:-translate-x-1/2 lg:left-[47%] lg:-translate-x-[52%]
+  bottom-[-25%] sm:bottom-[-20%] md:bottom-[-12%] lg:bottom-[-14%] xl:bottom-[-12%]"
 
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 1, duration: 1 }}
-            className="absolute z-20 -bottom-20 sm:bottom-10 md:bottom-14 lg:top-[30%] lg:bottom-auto right-4 w-[90%] lg:w-[700px] lg:h-[500px] bg-gray-800 text-white p-6 lg:p-10"
-          >
-            <h3 className="text-2xl lg:text-3xl font-bold mb-3">Opportunities Await</h3>
-            <p className="text-sm lg:text-base leading-relaxed">
-              Apply for Germany, Canada, USA H1B, Australia, UK, Denmark, and Dubai Work Permits with expert support from VJC Overseas. Discover a better career abroad — with step-by-step visa guidance and a smooth application process.
-            </p>
-          </motion.div>
+
+style={{ fontFamily: 'Times New Roman, serif' }}
+>
+  <h3 className="text-2xl lg:text-3xl font-bold mb-3">
+    Work Abroad with <span className="text-orange-500">VJC Overseas</span>: Unlock Global Career Opportunities
+  </h3>
+  <p className="text-sm lg:text-base leading-relaxed overflow-y-auto">
+    At <span className="text-orange-500">VJC Overseas</span>, we believe that the world is full of exciting career opportunities waiting for talented individuals like you.
+    Whether you're looking to advance your career, experience new cultures, or seek better work-life balance, we specialize in connecting skilled professionals with top-tier employers worldwide.
+    <br /><br />
+    <strong>Why Choose <span className="text-orange-500">VJC Overseas</span>?</strong><br />
+    <strong>1. Tailored Career Pathways</strong><br />
+    We understand that each individual’s career journey is unique. Our expert consultants work closely with you to understand your skills, experience, and aspirations, helping you find the perfect job abroad that matches your goals.
+    Whether you're a healthcare professional, engineer, IT specialist, or tradesperson, we have the right opportunities waiting for you.
+    <br /><br />
+    <strong>2. Global Network of Employers</strong><br />
+    Our extensive network of trusted international employers spans across various industries and countries.
+    From Canada and the Middle East to Australia and Europe, we collaborate with leading companies looking to hire qualified professionals from diverse fields.
+    With <span className="text-orange-500">VJC Overseas</span>, you’ll have access to some of the best job offers available worldwide.
+    <br /><br />
+    <strong>3. Hassle-Free Immigration and Relocation Support</strong><br />
+    We know that moving abroad can be overwhelming, which is why we provide end-to-end support, from visa and work permit assistance to relocation advice.
+    Our dedicated team ensures you navigate the entire process smoothly, so you can focus on what truly matters – your career growth and new experiences.
+    <br /><br />
+    <strong>4. Long-Term Success</strong><br />
+    Our commitment to your success doesn't end with securing a job. We are here for the long haul, offering guidance and support throughout your overseas employment,
+    helping you adapt to your new workplace and environment, and ensuring you thrive in your international career.
+    <br /><br />
+    Start your journey towards an exciting new career abroad today with <span className="text-orange-500">VJC Overseas</span>. Explore endless opportunities,
+    enhance your professional skills, and embrace new horizons with us.
+  </p>
+</motion.div>
+
         </motion.div>
 
         {/* Cards Carousel Section */}
@@ -133,7 +161,7 @@ const Migrate = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full mt-24 px-4 lg:px-20 relative"
+          className="w-full mt-32 px-4 lg:px-20 relative"
         >
           <h2 className="text-2xl lg:text-3xl font-semibold text-center mb-6">
             Select Your Work Permit Destination
@@ -164,16 +192,17 @@ const Migrate = () => {
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.05 }}
-                className="min-w-[280px] sm:min-w-[300px] max-w-[320px] h-[260px] bg-white bg-text-center border border-gray-200 cursor-pointer relative overflow-hidden"
+                className="min-w-[280px] sm:min-w-[300px] max-w-[320px] h-[260px] bg-white border border-gray-200 cursor-pointer relative overflow-hidden"
                 onClick={() => router.push(country.path)}
               >
                 <div
                   className="absolute inset-0 bg-cover bg-center"
                   style={{ backgroundImage: `url(${country.image})` }}
-                ></div>
-                <div className="relative z-10 p-6 h-full flex flex-col justify-between text-white bg-black/20 ">
-                  <h3 className="text-xl text-center mt-24 font-bold ">{country.name}</h3>
-                  
+                />
+                <div className="relative z-10 p-6 h-full flex flex-col justify-end text-white bg-black/30">
+                  <h3 className="text-xl text-center font-bold">
+                    {country.name}
+                  </h3>
                 </div>
               </motion.div>
             ))}
@@ -185,15 +214,21 @@ const Migrate = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="w-full px-4 lg:px-20 mt-20"
+          className="w-full px-4 lg:px-20 mt-20 mb-10"
         >
           <div className="flex flex-col lg:flex-row gap-10 items-center justify-center">
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1 }}
-              className="w-full lg:w-1/2 min-h-[300px] lg:min-h-[500px] bg-cover bg-center"
-              style={{ backgroundImage: "url('/nuthan.jpg')" }}
+              className="w-full lg:w-1/2 min-h-[350px] lg:min-h-[500px] bg-contain lg:bg-cover bg-center bg-no-repeat"
+
+              
+              style={{
+                backgroundImage: "url('/nuthan.jpg')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             />
             <div className="w-full lg:w-1/2">
               <Form />
