@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Nav from "./Nav";
 import Form from "./Form";
-import Nuthan from "./Nuthan";
+import Two from "./Two";
 import Footer from "./Footer";
 
 const textContainerVariants = {
@@ -31,7 +31,7 @@ const ContactPage = () => {
       {/* Main Section */}
       
       {/* Other Sections */}
-      <Nuthan />
+      <Two />
       <Footer />
 
     </>

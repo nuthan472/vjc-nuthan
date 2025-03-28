@@ -13,7 +13,7 @@ import {
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+    
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "About us", path: "/about" },
@@ -27,9 +27,16 @@ const Navbar = () => {
     { name: "Investor Visas", path: "/Investorvisas" },
     { name: "Schengen Visas", path: "/" },
     { name: "Resume Marketing", path: "/resume-marketing" },
-    { name: "Coaching/Training", path: "/coaching" },
-    { name: "services", path: "/services"},
+    { name: "Coaching/Training", path: "/" },
+   
   ];
+  const fixedItems = [
+    { name: "Services", path: "/services" },
+    { name: "Contact", path: "/contact" },
+    { name: "Login", path: "/login" },
+  ];
+  
+ 
 
   const migrateSubPages = [
     { name: "Germany", path: "/migrate/germany" },
@@ -43,7 +50,7 @@ const Navbar = () => {
     { name: "Denmark", path: "/migrate/denmark" },
     { name: "UAE", path: "/migrate/uae" },
   ];
-   
+  
   const WorkabroadSubPages = [
     { name: "Germany Work Permit", path: "/Workabroad/germany-work-permit" },
     { name: "Canada Work Permit", path: "/Workabroad/canada-work-permit" },
@@ -116,6 +123,19 @@ const Navbar = () => {
     { name: "UAE Jobseeker Visa", path: "/Jobseeker/uae-jobseeker-visa" },
    
   ];
+  const servicesSubPages = [
+    { name: "Profile Evaluation", path: "/services/profile-evaluation" },
+    { name: "Visa Assistance", path: "/services/visa-assistance" },
+    { name: "Immigration Consultation", path: "/services/immigration-consultation" },
+    { name: "Career Counseling", path: "/services/career-counseling" },
+    { name: "IELTS Coaching", path: "/services/ielts-coaching" },
+    { name: "Resume Writing", path: "/services/resume-writing" },
+    { name: "Job Search Assistance", path: "/services/job-search-assistance" },
+    { name: "Interview Preparation", path: "/services/interview-preparation" },
+    { name: "Post-Landing Services", path: "/services/post-landing-services" },
+    { name: "Legal & Documentation", path: "/services/legal-documentation" },
+  ];
+  
   const InvestorvisasSubPages = [
     { name: "USA Investor Visa", path: "/Investorvisas/usa-investor-visa"},
     { name: "Canada Investor Visa", path: "/Investorvisas/canada-investor-visa"},
@@ -145,7 +165,10 @@ const Navbar = () => {
   
 
   return (
+    
     <header>
+       
+      
       {/* Top Section */}
       <div className="bg-white py-0 px-2 shadow-md z-50 fixed top-0 w-screen">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
@@ -188,7 +211,7 @@ const Navbar = () => {
                 </div>
               ))}
             </div>
-
+             
             <div className="hidden md:flex items-center space-x-2 text-xs lg:text-sm text-black uppercase font-semibold italic">
               <div className="flex items-center animate-pulse text-custom-blue">
                 <a href="mailto:info@vjcoverseas.com" className="flex items-center">
@@ -209,6 +232,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      
+
 {/* Desktop Navbar */}
 <div className="bg-orange-500 fixed top-12 w-screen z-50 hidden md:block">
   <nav className="flex justify-between items-center px-2 max-w-7xl py-1.5">
@@ -223,7 +248,7 @@ const Navbar = () => {
               >
                 {item.name}
               </Link>
-
+               
               {/* Study Abroad Submenu */}
               <div className="absolute left-0 mt-3 invisible opacity-0 bg-gradient-to-br from-orange-500/60 to-black group-hover:visible group-hover:opacity-100 hover:visible hover:opacity-100 grid grid-cols-5 grid-rows-4 gap-2 bg-black bg-opacity-50 p-3 w-[700px] min-h-[200px] shadow-xl z-50 transition-all duration-300 ease-in-out">
                 {studyabroadSubPages.map((subItem) => (
@@ -290,7 +315,7 @@ const Navbar = () => {
                 {item.name}
               </Link>
 
-              {["Migrate To", "PR Visas", "Job Seeker Visas","Work Abroad","Investor Visas"].includes(item.name) && (
+              {["Migrate To", "PR Visas", "Job Seeker Visas","Work Abroad","Investor Visas","Services"].includes(item.name) && (
   <div className="absolute left-0 top-full mt-3 invisible bg-gradient-to-br from-orange-500/60 to-black opacity-0 group-hover:visible group-hover:opacity-100 hover:visible hover:opacity-100 flex flex-col space-y-2 bg-black bg-opacity-50 p-3 shadow-xl z-50 transition-all duration-300 ease-in-out">
     {(
       item.name === "Migrate To"
@@ -299,7 +324,8 @@ const Navbar = () => {
         ? WorkabroadSubPages
         : item.name === "PR Visas"
         ? prVisaSubPages
-      
+        : item.name === "Services"
+        ? servicesSubPages
         : item.name === "Investor Visas"
         ? InvestorvisasSubPages
         : item.name === "Job Seeker Visas"
@@ -378,22 +404,54 @@ const Navbar = () => {
         </nav>
       </div>
 
-      {/* Free Assessment Button */}
-      <Link href="/assessment">
-        <div className="fixed right-4 top-1/2 transform -translate-y-1/2 z-50 flex flex-col items-center space-y-2">
-          <div className="text-white font-bold text-sm bg-green-500 px-3 py-1 rounded-lg shadow-lg animate-shake">
-            FREE
-          </div>
-          <div className="animate-bounce">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="white" className="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
-          <div className="flex flex-col items-center text-white font-bold text-sm bg-orange-500 px-3 py-2 rounded-lg shadow-lg transition-transform hover:scale-110 hover:bg-orange-600">
-            {"ASSESSMENT".split("").map((char, i) => <span key={i}>{char}</span>)}
-          </div>
-        </div>
-      </Link>
+
+      <div className="fixed right-0 top-1/3 z-50 flex flex-col">
+      <div className="relative group">
+  <Link href="/services">
+    <button className="text-white font-bold text-sm bg-[#A67C52] px-3 py-6 shadow-lg rotate-180 [writing-mode:vertical-lr] transition-transform hover:scale-105 hover:bg-[#8D6E4C]">
+      Services
+    </button>
+  </Link>
+
+  {/* Dropdown for Services */}
+  <ul className="absolute left-full top-0 hidden group-hover:block bg-white text-black shadow-lg w-48">
+    {servicesSubPages.map((service, index) => (
+      <li key={index} className="px-4 py-2 hover:bg-gray-200">
+        <Link href={service.path}>{service.name}</Link>
+      </li>
+    ))}
+  </ul>
+</div>
+
+
+  <Link href="/assessment">
+    <div className="text-white font-bold text-sm bg-orange-500 px-3 py-6 shadow-lg rotate-180 [writing-mode:vertical-lr] transition-transform hover:scale-105 hover:bg-orange-600">
+      Assessment
+    </div>
+  </Link>
+
+  <Link href="/chat-student">
+    <div className="text-white font-bold text-sm bg-[#A67C52] px-3 py-6 shadow-lg rotate-180 [writing-mode:vertical-lr] transition-transform hover:scale-105 hover:bg-[#8D6E4C]">
+      Contact Us
+    </div>
+  </Link>
+</div>
+
+<div className="bg-orange-500 fixed top-12 w-screen z-50 md:hidden">
+  <nav className="flex justify-between items-center py-2 px-4">
+    <div className="flex items-center space-x-2 text-xs lg:text-sm text-black uppercase font-semibold italic">
+      <div className="flex items-center animate-pulse text-black">
+        <a href="mailto:info@vjcoverseas.com" className="flex items-center">
+          <FaEnvelope className="mr-1 w-4 h-8 text-white" />
+          <p>info@vjcoverseas.com</p>
+        </a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+
+
 
       <style>
         {`
@@ -410,6 +468,8 @@ const Navbar = () => {
         `}
       </style>
     </header>
+    
+ 
   );
 };
 

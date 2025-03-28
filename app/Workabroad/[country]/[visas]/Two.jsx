@@ -21,13 +21,12 @@ import USAh1b from "./USA-visa/USA-h1b"
 import USAinvestor from "./USA-visa/USA-investor"
 import USAtourist from "./USA-visa/USA-tourist"
 
-import Ausstud from "./Australia-visa/Aus-stud"
-import Ausfamily from "./Australia-visa/Aus-family"
-import Ausdependent from "./Australia-visa/Aus-dependent"
-import Ausbusiness from "./Australia-visa/Aus-business"
-import Aussponser from "./Australia-visa/Aus-sponsor";
-import Auswork from "./Australia-visa/Aus-work"
-// import Austourist from "./Australia-visa/Aus-tourist";
+import Aus482 from "./Australia-visa/Aus482"
+import Aus186 from "./Australia-visa/Aus186"
+import Aus189 from "./Australia-visa/Aus189"
+import Aus417 from "./Australia-visa/Aus417"
+import Aus190 from "./Australia-visa/Aus190"
+
 
 import UKBvisa from "./UK-visa/UKBvisa";
 import UKTvisa from "./UK-visa/UKTvisa";
@@ -128,13 +127,12 @@ const visaComponents = {
  'united-states-H1B-visa':USAh1b,
  'united-states-investor-visa':USAinvestor,
 
- 'australia-student-visa':Ausstud,
-//  'australia-tourist-visa':Austourist,
- 'australia-business-visa':Ausbusiness,
- 'australia-work-visa':Auswork,
- 'australia-family-visa':Ausfamily,
- 'australia-dependent-visa':Ausdependent,
- 'australia-sponsorship-visa':Aussponser,
+ 'australia-work-permit-482-visa':Aus482,
+ 'australia-work-permit-working-holiday-417-visa':Aus417,
+ 'australia-work-permit-nomited-visa-subclass-190':Aus190,
+ 'australia-work-permit-employer-186-visa':Aus186,
+ 'australia-work-permit-work-visa-subclass-189':Aus189,
+
 
  'united-kingdom-student-visa':UKstudvisa,
  'united-kingdom-tourist-visa':UKTvisa,
