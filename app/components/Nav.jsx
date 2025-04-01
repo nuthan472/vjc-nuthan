@@ -25,7 +25,7 @@ const Navbar = () => {
     
     { name: "Visit Visas", path: "/visitvisas" },
     { name: "Investor Visas", path: "/Investorvisas" },
-    { name: "Schengen Visas", path: "/" },
+    { name: "Schengen Visas", path: "/schengen" },
     { name: "Resume Marketing", path: "/resume-marketing" },
     { name: "Coaching/Training", path: "/" },
    
@@ -162,6 +162,38 @@ const Navbar = () => {
   { name: "Schengen Visit Visa", path: "/visitvisas/schengen-visit-visa" },
    
   ];
+  const schengenSubPages = [
+    { name: "Austria ", path: "/schengen/austria",},
+    { name: "Belgium ", path: "/schengen/belgium", },
+    { name: "Bulgaria ", path: "/schengen/bulgaria",  },
+    { name: "Croatia ", path: "/schengen/croatia",  },
+    { name: "Czech Republic ", path: "/schengen/czech-republic",},
+    { name: "Denmark ", path: "/schengen/denmark",  },
+    { name: "Estonia ", path: "/schengen/estonia",  },
+    { name: "Finland ", path: "/schengen/finland",  },
+    { name: "France ", path: "/schengen/france",  },
+    { name: "Germany ", path: "/schengen/germany",},
+    { name: "Greece ", path: "/schengen/greece",  },
+    { name: "Hungary ", path: "/schengen/hungary",  },
+    { name: "Iceland ", path: "/schengen/iceland",  },
+    { name: "Italy ", path: "/schengen/italy",  },
+    { name: "Latvia ", path: "/schengen/latvia", },
+    { name: "Liechtenstein ", path: "/schengen/liechtenstein", },
+    { name: "Lithuania ", path: "/schengen/lithuania", },
+    { name: "Luxembourg ", path: "/schengen/luxembourg",},
+    { name: "Malta ", path: "/schengen/malta",},
+    { name: "Netherlands ", path: "/schengen/netherlands",},
+    { name: "Norway ", path: "/schengen/norway", },
+    { name: "Poland ", path: "/schengen/poland", },
+    { name: "Portugal ", path: "/schengen/portugal",  },
+    { name: "Romania ", path: "/schengen/romania",  },
+    { name: "Slovakia ", path: "/schengen/slovakia", },
+    { name: "Slovenia ", path: "/schengen/slovenia",  },
+    { name: "Spain ", path: "/schengen/spain", },
+    { name: "Sweden ", path: "/schengen/sweden",},
+    { name: "Switzerland ", path: "/schengen/switzerland", },
+   
+  ];
   
 
   return (
@@ -292,10 +324,30 @@ const Navbar = () => {
               >
                 {item.name}
               </Link>
-
-              {/* Visit Visas Submenu - OPEN TO LEFT */}
-              <div className="absolute right-0 mt-3 invisible opacity-0 bg-gradient-to-br from-orange-500/60 to-black group-hover:visible group-hover:opacity-100 hover:visible hover:opacity-100 grid grid-cols-4 gap-2 bg-black bg-opacity-50 p-3 w-[600px] min-h-[150px] shadow-xl z-50 transition-all duration-300 ease-in-out">
+             {/* Visit Visas Submenu - OPEN TO LEFT */}
+             <div className="absolute right-0 mt-3 invisible opacity-0 bg-gradient-to-br from-orange-500/60 to-black group-hover:visible group-hover:opacity-100 hover:visible hover:opacity-100 grid grid-cols-4 gap-2 bg-black bg-opacity-50 p-3 w-[600px] min-h-[150px] shadow-xl z-50 transition-all duration-300 ease-in-out">
                 {visitvisasSubPages.map((subItem) => (
+                  <Link
+                    href={subItem.path}
+                    key={subItem.name}
+                    className="text-white text-sm font-semibold text-center px-3 py-2 hover:text-orange-500 hover:bg-white hover:bg-opacity-10 transition duration-200 ease-in-out whitespace-normal break-words"
+                  >
+                    {subItem.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ) : item.name === "Schengen Visas" ? (
+            <div className="relative group">
+              <Link
+                href={item.path}
+                className="text-white text-sm lg:text-xs font-semibold px-3.5 hover:bg-white hover:bg-opacity-20 uppercase mt-2"
+              >
+                {item.name}
+              </Link>
+             {/* Visit Visas Submenu - OPEN TO LEFT */}
+             <div className="absolute right-0 mt-3 invisible opacity-0 bg-gradient-to-br from-orange-500/60 to-black group-hover:visible group-hover:opacity-100 hover:visible hover:opacity-100 grid grid-cols-6 gap-2 bg-black bg-opacity-50 p-3 w-[600px] min-h-[150px] shadow-xl z-50 transition-all duration-300 ease-in-out">
+                {schengenSubPages.map((subItem) => (
                   <Link
                     href={subItem.path}
                     key={subItem.name}
@@ -313,7 +365,10 @@ const Navbar = () => {
                 className="text-white text-sm lg:text-xs font-semibold px-3.5  uppercase mt-1"
               >
                 {item.name}
-              </Link>
+              </Link>   
+
+
+
 
               {["Migrate To", "PR Visas", "Job Seeker Visas","Work Abroad","Investor Visas","Services"].includes(item.name) && (
   <div className="absolute left-0 top-full mt-3 invisible bg-gradient-to-br from-orange-500/60 to-black opacity-0 group-hover:visible group-hover:opacity-100 hover:visible hover:opacity-100 flex flex-col space-y-2 bg-black bg-opacity-50 p-3 shadow-xl z-50 transition-all duration-300 ease-in-out">
@@ -357,54 +412,7 @@ const Navbar = () => {
 </div>
 
 
-     {/* Mobile Navbar */}
-      <div className="bg-orange-500 fixed top-12 w-screen z-50 md:hidden">
-        <nav className="flex justify-between items-center py-2">
-          <div className="flex items-center space-x-2 text-xs lg:text-sm text-black uppercase font-semibold italic">
-            <div className="flex items-center animate-pulse text-black">
-              <a href="mailto:info@vjcoverseas.com" className="flex items-center">
-                <FaEnvelope className="mr-1 w-5 h-5 text-orange-500" />
-                <p>info@vjcoverseas.com</p>
-              </a>
-            </div>
-          </div>
-
-          <div className="flex items-center space-x-4 ml-6">
-            <a href="https://www.facebook.com/VJCOVERSEAS/" target="_blank" rel="noopener noreferrer">
-              <FaFacebook className="text-white hover:text-black text-xl" />
-            </a>
-            <a href="https://x.com/VJCOVERSEAS" target="_blank" rel="noopener noreferrer">
-              <FaTwitter className="text-white hover:text-black text-xl" />
-            </a>
-            <a href="https://www.instagram.com/vjcoverseas_/" target="_blank" rel="noopener noreferrer">
-              <FaInstagram className="text-white hover:text-black text-xl" />
-            </a>
-          </div>
-
-          <div className="flex items-center px-4 ml-4">
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-white text-xl">
-              {isMenuOpen ? <FaTimes /> : <FaBars />}
-            </button>
-          </div>
-
-          <div className={`absolute top-9 left-0 w-full h-screen items-center bg-orange-500 flex flex-col space-y-4 ${isMenuOpen ? 'block' : 'hidden'} transition-all ease-in-out duration-300`}>
-            {menuItems.map((item, index) => (
-              <React.Fragment key={item.name}>
-                <Link
-                  href={item.path}
-                  className="text-white text-sm font-semibold px-4 mt-2 hover:bg-white hover:bg-opacity-20 uppercase"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-                {index < menuItems.length - 1 && <div className="w-40 h-px bg-white mx-2" />}
-              </React.Fragment>
-            ))}
-          </div>
-        </nav>
-      </div>
-
-
+     
       <div className="fixed right-0 top-1/3 z-50 flex flex-col">
       <div className="relative group">
   <Link href="/services">
@@ -447,7 +455,42 @@ const Navbar = () => {
         </a>
       </div>
     </div>
+     {/* Social Media Icons */}
+     <div className="flex items-center space-x-4">
+            <a href="https://www.facebook.com/VJCOVERSEAS/" target="_blank" rel="noopener noreferrer">
+              <FaFacebook className="text-white hover:text-black text-xl" />
+            </a>
+            <a href="https://x.com/VJCOVERSEAS?t=aRM7qjBL9saJzNwyDzuCCg&s=09" target="_blank" rel="noopener noreferrer">
+              <FaTwitter className="text-white hover:text-black text-xl" />
+            </a>
+            <a href="https://www.instagram.com/vjcoverseas_/" target="_blank" rel="noopener noreferrer">
+              <FaInstagram className="text-white hover:text-black text-xl" />
+            </a>
+          </div>
+           {/* Hamburger Menu */}
+        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-white text-2xl focus:outline-none">
+          {isMenuOpen ? <FaTimes /> : <FaBars />}
+        </button>       
   </nav>
+  {/* Dropdown Menu for Small Screens */}
+  <div
+        className={`absolute left-0 w-full bg-orange-600 shadow-md transition-all duration-300 ${
+          isMenuOpen ? "top-full opacity-100 visible" : "top-[-300px] opacity-0 invisible"
+        }`}
+      >
+        <ul className="flex flex-col text-center py-4 space-y-3">
+          {menuItems.map((item, index) => (
+            <li key={item.name}>
+              <Link href={item.path} className="text-white text-lg font-semibold hover:underline"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+              {index < menuItems.length - 1 && <hr className="w-1/2 mx-auto border-white opacity-50" />}
+            </li>
+          ))}
+        </ul>
+      </div>
 </div>
 
 

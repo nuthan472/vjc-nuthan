@@ -70,10 +70,10 @@ const backgroundImages = {
   "germany-work-permit": "/germany.jpg",
   "canada-work-permit": "/canada.webp",
   "usa-h1b-visa": "/usabgimg.jpg",
-  "australia-work-permit": "/australiabgimg.jpg",
+  "australia-work-permit": "/australiaresume.jpg",
   "united-kingdom-work-permit": "/ukk.jpg",
-  "denmark-work-permit": "/nzz.jpg",
-  "dubai-work-permit": "/sa666.png",
+  "denmark-work-permit": "/de.jpg",
+  "dubai-work-permit": "/du.webp",
 };
 
 const WorkabroadCountry = () => {

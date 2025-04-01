@@ -162,18 +162,18 @@ const Migrate = () => {
       </div>
 
       {/* FORM POPUP */}
-      {showFormPopup && (
-        <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4 sm:p-6">
-          <div className="relative w-full max-w-xl bg-white rounded-xl shadow-2xl p-6 sm:p-8 animate-fadeIn">
-            <button
-              onClick={() => setShowFormPopup(false)}
-              className="absolute top-3 right-3 text-gray-700 hover:text-red-500 transition"
-            >
-              <X className="w-6 h-6" />
-            </button>
-            <Form />
-          </div>
-        </div>
+{showFormPopup && (
+  <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4 sm:p-6">
+    <div className="relative w-full max-w-xl bg-white rounded-xl shadow-2xl p-4 sm:p-8 animate-fadeIn max-h-[90vh] overflow-y-auto">
+      <button
+        onClick={() => setShowFormPopup(false)}
+        className="absolute top-3 right-3 text-gray-700 hover:text-red-500 transition"
+      >
+        <X className="w-6 h-6" />
+      </button>
+      <Form />
+    </div>
+  </div>
       )}
     </>
   );

@@ -29,8 +29,7 @@ export default function Two() {
      {/* 🔹 Extra Space for Small Screens Only */}
      <div className="block sm:hidden lg:block h-16"></div>
 
-
-<section className="pt-0 ">
+ <section className="w-full overflow-hidden py-4 bg-gray-100">
   <Marquee speed={60} pauseOnHover={true} gradient={true} gradientWidth={50}>
     {[
       { src: "/usa.svg", alt: "USA" },
@@ -42,15 +41,17 @@ export default function Two() {
       { src: "/th.jpg", alt: "Italy" },
       { src: "/dubai.svg", alt: "Dubai" },
     ].map((country, index) => (
-      <div key={index} className="mx-4 flex flex-col items-center">
+        <div key={index} className="flex flex-col items-center">
         <Image
           src={country.src}
           alt={country.alt}
           width={120}
           height={80}
-          className="rounded-md shadow-lg hover:scale-110 transition-transform duration-300"
+          className="max-w-[100px] gap-x-6 mx-4 sm:max-w-[120px] h-auto rounded-md shadow-lg hover:scale-110 transition-transform duration-300"
         />
-        <p className="text-sm font-semibold mt-2 text-blue-600">{country.alt}</p>
+        <p className="text-xs sm:text-sm gap-x-6 font-semibold mt-1 sm:mt-2 text-blue-600 text-center">
+          {country.alt}
+        </p>
       </div>
     ))}
   </Marquee>
@@ -133,16 +134,17 @@ export default function Two() {
             
             <Form /> {/* 🔹 Your form component */}
           </div>
-
-          {/* Right Side - Trust & Testimonial Section */}
+{/* Right Side - Trust & Testimonial Section */}
 <div className="relative w-full lg:w-1/2 flex flex-col items-center lg:items-start">
   {/* Testimonial Box */}
-  <div className="bg-blue-600 text-white p-6 -top-[150px] rounded-lg shadow-lg relative z-10 w-[80%] lg:w-[70%]">
+  <div className="bg-blue-600 text-white p-6 mt-6 lg:-top-[150px] rounded-lg shadow-lg relative z-10 w-[90%] sm:w-[80%] lg:w-[70%] mx-auto lg:mx-0">
     <p className="text-lg italic">
       "VJC Overseas made my visa process seamless! Highly professional and always supportive. Highly recommended!" 
     </p>
     <p className="mt-4 font-semibold">- Emily Johnson, USA</p>
   </div>
+
+
 
 {/* Image Positioned at Bottom Right */}
 <div className="relative w-full flex justify-end">
@@ -151,9 +153,10 @@ export default function Two() {
     alt="Trusted" 
     width={2440} 
     height={2440} 
-    className="w-[2440px] h-[2440px] lg:w-[520px] lg:h-[520px] object-contain absolute right-[-130px] -top-[240px]"
+    className="w-full max-w-[520px] h-auto object-contain md:absolute md:right-[-130px] md:-top-[240px] md:w-[520px] md:h-[520px]"
   />
 </div>
+
 
 </div>
 
