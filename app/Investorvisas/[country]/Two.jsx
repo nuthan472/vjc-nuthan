@@ -7,10 +7,10 @@ import { ArrowRight } from "lucide-react";
 import Form from "./Form";
 import CanadaPR from "./CanadaPR";
 import Australiapr from "./Australiapr";
-import UKpr from "./UKpr";
-import Newzelandpr from "./Newzelandpr";
+import UKin from "./UKin";
+import Portin from "./Portin";
 import Germanybluecard from "./Germanybluecard";
-import Usagreencard from "./Usagreencard";
+import Usain from "./Usain";
 
 const visaData = [
 
@@ -68,7 +68,7 @@ const Migrate = () => {
                 {selectedVisa.name}
               </h1>
               <p className="mt-4 text-base sm:text-lg lg:text-xl max-w-xl">
-                Start your migration journey with the right Permanent Residency Visa option. Choose your destination and let us guide you.
+              "Start your investment journey with the right Investor Visa option. Choose your destination and let us guide you."
               </p>
             </motion.div>
 
@@ -82,9 +82,9 @@ const Migrate = () => {
       {/* ===== BOTTOM SECTION ===== */}
       <div className="relative z-10 w-full bg-white px-4 sm:px-6 lg:px-12 pt-10 pb-16">
         <div className="flex justify-center md:justify-start mb-8 ml-0 md:ml-16">
-          <h2 className="text-3xl font-bold text-gray-800 bg-gradient-to-r from-orange-500 to-black bg-clip-text text-transparent">
-            <span className="block md:text-left text-center">Secure Dream Job,</span>
-            <span className="block text-center">Through Seeker Visa</span>
+          <h2 className="text-3xl font-bold text-gray-800 -ml-8 bg-gradient-to-r from-orange-500 to-black bg-clip-text text-transparent">
+            <span className="block md:text-left text-center">"Secure Your Future,</span>
+            <span className="block text-center">Invest for Residency."</span>
           </h2>
         </div>
 
@@ -111,7 +111,7 @@ const Migrate = () => {
           {/* Visa Info Content Box */}
           <div
             className="w-full md:w-2/3 p-4 md:p-6 rounded-xl border border-gray-300 shadow-md relative md:-mt-32 sm:-mt-20 mt-0"
-            style={{ maxHeight: "700px", minHeight: "450px", overflowY: "auto" }}
+            style={{ maxHeight: "700px", minHeight: "500px", overflowY: "auto" }}
           >
             {selectedVisa.path === defaultVisa.path ? (
               <div className="text-gray-700 text-lg leading-relaxed">
@@ -121,14 +121,14 @@ const Migrate = () => {
               <CanadaPR />
             ) : selectedVisa.path === "/PR-visas/australiapr" ? (
               <Australiapr />
-            ) : selectedVisa.path === "/PR-visas/ukpr" ? (
-              <UKpr />
-            ) : selectedVisa.path === "/PR-visas/newzelandpr" ? (
-              <Newzelandpr />
+            ) : selectedVisa.path === "/Investorvisas/uk-investor-visa" ? (
+              <UKin />
+            ) : selectedVisa.path === "/Investorvisas/portugal-investor-visa" ? (
+              <Portin />
             ) : selectedVisa.path === "/PR-visas/germanybluecard" ? (
               <Germanybluecard />
-            ) : selectedVisa.path === "/PR-visas/usagreencard" ? (
-              <Usagreencard />
+            ) : selectedVisa.path === "/Investorvisas/usa-investor-visa" ? (
+              <Usain />
             ) : (
               <div className="text-gray-700 text-lg leading-relaxed">
                 Information about <strong>{selectedVisa.name}</strong> will be displayed here.

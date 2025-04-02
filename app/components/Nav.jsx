@@ -412,40 +412,28 @@ const Navbar = () => {
 </div>
 
 
-     
-      <div className="fixed right-0 top-1/3 z-50 flex flex-col">
-      <div className="relative group">
+<div className="fixed right-2 md:right-0 top-1/3 z-50 flex flex-col space-y-2 md:space-y-3 max-w-[100vw] overflow-hidden">
   <Link href="/services">
-    <button className="text-white font-bold text-sm bg-[#A67C52] px-3 py-6 shadow-lg rotate-180 [writing-mode:vertical-lr] transition-transform hover:scale-105 hover:bg-[#8D6E4C]">
+    <button className="text-white font-bold text-xs sm:text-sm bg-[#A67C52] px-2 sm:px-3 py-4 sm:py-5 md:py-6 shadow-lg rotate-180 [writing-mode:vertical-lr] transition-transform hover:scale-105 hover:bg-[#8D6E4C]">
       Services
     </button>
   </Link>
 
-  {/* Dropdown for Services */}
-  <ul className="absolute left-full top-0 hidden group-hover:block bg-white text-black shadow-lg w-48">
-    {servicesSubPages.map((service, index) => (
-      <li key={index} className="px-4 py-2 hover:bg-gray-200">
-        <Link href={service.path}>{service.name}</Link>
-      </li>
-    ))}
-  </ul>
-</div>
-
-
   <Link href="/assessment">
-    <div className="text-white font-bold text-sm bg-orange-500 px-3 py-6 shadow-lg rotate-180 [writing-mode:vertical-lr] transition-transform hover:scale-105 hover:bg-orange-600">
+    <div className="text-white font-bold text-xs sm:text-sm bg-orange-500 px-2 sm:px-3 py-4 sm:py-5 md:py-6 shadow-lg rotate-180 [writing-mode:vertical-lr] transition-transform hover:scale-105 hover:bg-orange-600">
       Assessment
     </div>
   </Link>
 
   <Link href="/chat-student">
-    <div className="text-white font-bold text-sm bg-[#A67C52] px-3 py-6 shadow-lg rotate-180 [writing-mode:vertical-lr] transition-transform hover:scale-105 hover:bg-[#8D6E4C]">
+    <div className="text-white font-bold text-xs sm:text-sm bg-[#A67C52] px-2 sm:px-3 py-4 sm:py-5 md:py-6 shadow-lg rotate-180 [writing-mode:vertical-lr] transition-transform hover:scale-105 hover:bg-[#8D6E4C]">
       Contact Us
     </div>
   </Link>
 </div>
 
-<div className="bg-orange-500 fixed top-12 w-screen z-50 md:hidden">
+
+<div className="bg-orange-500 fixed top-12 w-screen z-50 md:hidden block">
   <nav className="flex justify-between items-center py-2 px-4">
     <div className="flex items-center space-x-2 text-xs lg:text-sm text-black uppercase font-semibold italic">
       <div className="flex items-center animate-pulse text-black">
@@ -455,43 +443,72 @@ const Navbar = () => {
         </a>
       </div>
     </div>
-     {/* Social Media Icons */}
-     <div className="flex items-center space-x-4">
-            <a href="https://www.facebook.com/VJCOVERSEAS/" target="_blank" rel="noopener noreferrer">
-              <FaFacebook className="text-white hover:text-black text-xl" />
-            </a>
-            <a href="https://x.com/VJCOVERSEAS?t=aRM7qjBL9saJzNwyDzuCCg&s=09" target="_blank" rel="noopener noreferrer">
-              <FaTwitter className="text-white hover:text-black text-xl" />
-            </a>
-            <a href="https://www.instagram.com/vjcoverseas_/" target="_blank" rel="noopener noreferrer">
-              <FaInstagram className="text-white hover:text-black text-xl" />
-            </a>
-          </div>
-           {/* Hamburger Menu */}
-        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-white text-2xl focus:outline-none">
-          {isMenuOpen ? <FaTimes /> : <FaBars />}
-        </button>       
+
+    {/* Social Media Icons */}
+    <div className="flex items-center space-x-4">
+      <a href="https://www.facebook.com/VJCOVERSEAS/" target="_blank" rel="noopener noreferrer">
+        <FaFacebook className="text-white hover:text-black text-xl" />
+      </a>
+      <a href="https://x.com/VJCOVERSEAS?t=aRM7qjBL9saJzNwyDzuCCg&s=09" target="_blank" rel="noopener noreferrer">
+        <FaTwitter className="text-white hover:text-black text-xl" />
+      </a>
+      <a href="https://www.instagram.com/vjcoverseas_/" target="_blank" rel="noopener noreferrer">
+        <FaInstagram className="text-white hover:text-black text-xl" />
+      </a>
+    </div>
+
+    {/* Hamburger Menu */}
+    <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-white text-2xl focus:outline-none">
+      {isMenuOpen ? <FaTimes /> : <FaBars />}
+    </button>
   </nav>
+
   {/* Dropdown Menu for Small Screens */}
   <div
-        className={`absolute left-0 w-full bg-orange-600 shadow-md transition-all duration-300 ${
-          isMenuOpen ? "top-full opacity-100 visible" : "top-[-300px] opacity-0 invisible"
-        }`}
-      >
-        <ul className="flex flex-col text-center py-4 space-y-3">
-          {menuItems.map((item, index) => (
-            <li key={item.name}>
-              <Link href={item.path} className="text-white text-lg font-semibold hover:underline"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-              {index < menuItems.length - 1 && <hr className="w-1/2 mx-auto border-white opacity-50" />}
-            </li>
-          ))}
-        </ul>
-      </div>
+    className={`absolute left-0 w-full bg-orange-600 shadow-md transition-all duration-300 ${
+      isMenuOpen ? "top-full opacity-100 visible" : "top-[-300px] opacity-0 invisible"
+    }`}
+  >
+    <ul className="flex flex-col text-center py-4 space-y-3 max-h-[500px] overflow-y-auto">
+      {menuItems.map((item, index) => (
+        <li key={item.name}>
+          <Link
+            href={item.path}
+            className="text-white text-lg font-semibold hover:underline"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            {item.name}
+          </Link>
+          {index < menuItems.length - 1 && <hr className="w-1/2 mx-auto border-white opacity-50" />}
+        </li>
+      ))}
+
+      {/* Extra Mobile-only Links */}
+      <li className="mt-3">
+        <Link
+          href="/services"
+          className="text-white text-lg font-semibold hover:underline"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          Services
+        </Link>
+      </li>
+      <hr className="w-1/2 mx-auto border-white opacity-50" />
+      <li>
+        <Link
+          href="/contact"
+          className="text-white text-lg font-semibold hover:underline"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          Contact Us
+        </Link>
+      </li>
+    </ul>
+  </div>
 </div>
+
+
+
 
 
 
