@@ -19,12 +19,12 @@ const Navbar = () => {
     { name: "About us", path: "/about" },
     { name: "Migrate To", path: "/migrate" },
     { name: "Study Abroad", path: "/studyabroad" },
-    { name: "PR Visas", path: "/PR-visas" },
-    { name: "Work Abroad", path: "/Workabroad" },
+    { name: "PR Visas", path: "/pr-visas" },
+    { name: "Work Abroad", path: "/workabroad" },
     { name: "Job Seeker Visas", path: "/jobseeker" },
     
     { name: "Visit Visas", path: "/visitvisas" },
-    { name: "Investor Visas", path: "/Investorvisas" },
+    { name: "Investor Visas", path: "/investorvisas" },
     { name: "Schengen Visas", path: "/schengen" },
     { name: "Resume Marketing", path: "/resume-marketing" },
     { name: "Coaching/Training", path: "/" },
@@ -52,13 +52,13 @@ const Navbar = () => {
   ];
   
   const WorkabroadSubPages = [
-    { name: "Germany Work Permit", path: "/Workabroad/germany-work-permit" },
-    { name: "Canada Work Permit", path: "/Workabroad/canada-work-permit" },
-    { name: "USA H1b Visa", path: "/Workabroad/usa-h1b-visa" },
-    { name: "Australia Work Permit", path: "/Workabroad/australia-work-permit" },
-    { name: "UK Work Permit", path: "/Workabroad/united-kingdom-work-permit" },
-    { name: "Denmark Work Permit", path: "/Workabroad/denmark-work-permit" },
-    { name: "Dubai Work Permit", path: "/Workabroad/dubai-work-permit" },
+    { name: "Germany Work Permit", path: "/workabroad/germany-work-permit" },
+    { name: "Canada Work Permit", path: "/workabroad/canada-work-permit" },
+    { name: "USA H1b Visa", path: "/workabroad/usa-h1b-visa" },
+    { name: "Australia Work Permit", path: "/workabroad/australia-work-permit" },
+    { name: "UK Work Permit", path: "/workabroad/united-kingdom-work-permit" },
+    { name: "Denmark Work Permit", path: "/workabroad/denmark-work-permit" },
+    { name: "Dubai Work Permit", path: "/workabroad/dubai-work-permit" },
   ];
 
   const studyabroadSubPages = [
@@ -89,12 +89,12 @@ const Navbar = () => {
   ];
 
   const prVisaSubPages = [
-    { name: "Canada Permanent Residency Visa", path: "/PR-visas/canadapr" },
-    { name: "Australia Permanent Residency Visa", path: "/PR-visas/australiapr" },
-    { name: "UK Permanent Residency Visa", path: "/PR-visas/ukpr" },
-    { name: "New Zealand Permanent Residency Visa", path: "/PR-visas/newzealandpr" },
-    { name: "Germany Blue Card Visa", path: "/PR-visas/germanybluecard" },
-    { name: "USA Green Card", path: "/PR-visas/usagreencard" },
+    { name: "Canada Permanent Residency Visa", path: "/pr-visas/canadapr" },
+    { name: "Australia Permanent Residency Visa", path: "/pr-visas/australiapr" },
+    { name: "UK Permanent Residency Visa", path: "/pr-visas/ukpr" },
+    { name: "New Zealand Permanent Residency Visa", path: "/pr-visas/newzelandpr" },
+    { name: "Germany Blue Card Visa", path: "/pr-visas/germanybluecard" },
+    { name: "USA Green Card", path: "/pr-visas/usagreencard" },
   ];
   const resumemarketingSubPages = [
   
@@ -115,12 +115,12 @@ const Navbar = () => {
     
   ];
   const Jobseeker = [
-    { name: "Germany Jobseeker Visa", path: "/Jobseeker/germany-jobseeker-visa" },
-    { name: "Austria Jobseeker Visa", path: "/Jobseeker/canada-jobseeker-visa" },
-    { name: "Portugal Jobseeker Visa", path: "/Jobseeker/portugal-jobseeker-visa" },
-    { name: "Sweden Jobseeker Visa", path: "/Jobseeker/sweden-jobseeker-visa" },
-    { name: "Norway Jobseeker Visa", path: "/Jobseeker/norway-jobseeker-visa" },
-    { name: "UAE Jobseeker Visa", path: "/Jobseeker/uae-jobseeker-visa" },
+    { name: "Germany Jobseeker Visa", path: "/jobseeker/germany-jobseeker-visa" },
+    { name: "Austria Jobseeker Visa", path: "/jobseeker/canada-jobseeker-visa" },
+    { name: "Portugal Jobseeker Visa", path: "/jobseeker/portugal-jobseeker-visa" },
+    { name: "Sweden Jobseeker Visa", path: "/jobseeker/sweden-jobseeker-visa" },
+    { name: "Norway Jobseeker Visa", path: "/jobseeker/norway-jobseeker-visa" },
+    { name: "UAE Jobseeker Visa", path: "/jobseeker/uae-jobseeker-visa" },
    
   ];
   const servicesSubPages = [
@@ -137,14 +137,14 @@ const Navbar = () => {
   ];
   
   const InvestorvisasSubPages = [
-    { name: "USA Investor Visa", path: "/Investorvisas/usa-investor-visa"},
-    { name: "Canada Investor Visa", path: "/Investorvisas/canada-investor-visa"},
-    { name: "Germany Investor Visa", path: "/Investorvisas/germany-investor-visa" },
-    { name: "Australia Investor Visa", path: "/Investorvisas/australia-investor-visa"},
-    { name: "UK Investor Visa", path: "/Investorvisas/uk-investor-visa" },
-    { name: "UAE Investor Visa", path: "/Investorvisas/uae-investor-visa"},
-    { name: "Portugal Investor Visa", path: "/Investorvisas/portugal-investor-visa" },
-    { name: "Austria Investor Visa", path: "/Investorvisas/austria-investor-visa" },
+    { name: "USA Investor Visa", path: "/investorvisas/usa-investor-visa"},
+    { name: "Canada Investor Visa", path: "/investorvisas/canada-investor-visa"},
+    { name: "Germany Investor Visa", path: "/investorvisas/germany-investor-visa" },
+    { name: "Australia Investor Visa", path: "/investorvisas/australia-investor-visa"},
+    { name: "UK Investor Visa", path: "/investorvisas/uk-investor-visa" },
+    { name: "UAE Investor Visa", path: "/investorvisas/uae-investor-visa"},
+    { name: "Portugal Investor Visa", path: "/investorvisas/portugal-investor-visa" },
+    { name: "Austria Investor Visa", path: "/investorvisas/austria-investor-visa" },
    
   ];
   const visitvisasSubPages = [

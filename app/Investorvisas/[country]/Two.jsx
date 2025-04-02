@@ -14,14 +14,14 @@ import Usain from "./Usain";
 
 const visaData = [
 
-  { name: "USA Investor Visa", path: "/Investorvisas/usa-investor-visa", image: "/ausinvestment.webp" },
-  { name: "Canada Investor Visa", path: "/Investorvisas/canada-investor-visa", image: "/canadainvestment.webp" },
-  { name: "Germany Investor Visa", path: "/Investorvisas/germany-investor-visa", image: "/germanyinvestment.webp" },
-  { name: "Australia Investor Visa", path: "/Investorvisas/australia-investor-visa", image: "/Australiainvestment.webp" },
-  { name: "UK Investor Visa", path: "/Investorvisas/uk-investor-visa", image: "/ukinvestment.webp" },
-  { name: "UAE Investor Visa", path: "/Investorvisas/uae-investor-visa", image: "/uaeinvestment.webp" },
-  { name: "Portugal Investor Visa", path: "/Investorvisas/portugal-investor-visa", image: "/portugalinvestment.webp" },
-  { name: "Austria Investor Visa", path: "/Investorvisas/austria-investor-visa", image: "/austriainvest.webp" },
+  { name: "USA Investor Visa", path: "/investorvisas/usa-investor-visa", image: "/ausinvestment.webp" },
+  { name: "Canada Investor Visa", path: "/investorvisas/canada-investor-visa", image: "/canadainvestment.webp" },
+  { name: "Germany Investor Visa", path: "/investorvisas/germany-investor-visa", image: "/germanyinvestment.webp" },
+  { name: "Australia Investor Visa", path: "/investorvisas/australia-investor-visa", image: "/Australiainvestment.webp" },
+  { name: "UK Investor Visa", path: "/investorvisas/uk-investor-visa", image: "/ukinvestment.webp" },
+  { name: "UAE Investor Visa", path: "/investorvisas/uae-investor-visa", image: "/uaeinvestment.webp" },
+  { name: "Portugal Investor Visa", path: "/investorvisas/portugal-investor-visa", image: "/portugalinvestment.webp" },
+  { name: "Austria Investor Visa", path: "/investorvisas/austria-investor-visa", image: "/austriainvest.webp" },
 ];
 const defaultVisa = {
   name: "Permanent Residency Visa",
@@ -117,17 +117,17 @@ const Migrate = () => {
               <div className="text-gray-700 text-lg leading-relaxed">
                 Please select a visa type from the left to view more detailed information about that particular Permanent Residency visa.
               </div>
-            ) : selectedVisa.path === "/Jobseeker/USAInvestorVisa" ? (
+            ) : selectedVisa.path === "/jobseeker/USAInvestorVisa" ? (
               <CanadaPR />
-            ) : selectedVisa.path === "/PR-visas/australiapr" ? (
+            ) : selectedVisa.path === "/pr-visas/australiapr" ? (
               <Australiapr />
-            ) : selectedVisa.path === "/Investorvisas/uk-investor-visa" ? (
+            ) : selectedVisa.path === "/investorvisas/uk-investor-visa" ? (
               <UKin />
-            ) : selectedVisa.path === "/Investorvisas/portugal-investor-visa" ? (
+            ) : selectedVisa.path === "/investorvisas/portugal-investor-visa" ? (
               <Portin />
-            ) : selectedVisa.path === "/PR-visas/germanybluecard" ? (
+            ) : selectedVisa.path === "/pr-visas/germanybluecard" ? (
               <Germanybluecard />
-            ) : selectedVisa.path === "/Investorvisas/usa-investor-visa" ? (
+            ) : selectedVisa.path === "/investorvisas/usa-investor-visa" ? (
               <Usain />
             ) : (
               <div className="text-gray-700 text-lg leading-relaxed">

@@ -9,37 +9,37 @@ import Form from "./Form"; // Adjust path if needed
 const countriesData = [
   {
     name: "Germany Work Permit",
-    path: "/Workabroad/germany-work-permit",
+    path: "/workabroad/germany-work-permit",
     image: "/germany.jpg",
   },
   {
     name: "Canada Work Permit",
-    path: "/Workabroad/canada-work-permit",
+    path: "/workabroad/canada-work-permit",
     image: "/canada.webp",
   },
   {
     name: "USA H1b Visa",
-    path: "/Workabroad/usa-h1b-visa",
+    path: "/workabroad/usa-h1b-visa",
     image: "/usa1.jpg",
   },
   {
     name: "Australia Work Permit",
-    path: "/Workabroad/australia-work-permit",
+    path: "/workabroad/australia-work-permit",
     image: "/australia.jpg",
   },
   {
     name: "UK Work Permit",
-    path: "/Workabroad/united-kingdom-work-permit",
+    path: "/workabroad/united-kingdom-work-permit",
     image: "/uk1.webp",
   },
   {
     name: "Denmark Work Permit",
-    path: "/Workabroad/denmark-work-permit",
+    path: "/workabroad/denmark-work-permit",
     image: "/de.jpg",
   },
   {
     name: "Dubai Work Permit",
-    path: "/Workabroad/dubai-work-permit",
+    path: "/workabroad/dubai-work-permit",
     image: "/du.webp",
   },
 ];
