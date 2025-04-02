@@ -90,9 +90,10 @@ const WorkabroadCountry = () => {
   }, [params?.country]);
 
   const formattedCountry =
-    currentCountry?.charAt(0).toUpperCase() + currentCountry?.slice(1).replace(/-/g, " ");
-  const visas = countryVisaData[currentCountry] || [];
-  const bgImage = backgroundImages[currentCountry];
+  currentCountry?.charAt(0).toUpperCase() + currentCountry?.slice(1).replace(/-/g, " ");
+const visas = countryVisaData[currentCountry] || [];
+const bgImage = backgroundImages[currentCountry];
+
 
   return (
     <div

@@ -51,7 +51,7 @@ const Navbar = () => {
     { name: "UAE", path: "/migrate/uae" },
   ];
   
-  const WorkabroadSubPages = [
+  const workabroadSubPages = [
     { name: "Germany Work Permit", path: "/workabroad/germany-work-permit" },
     { name: "Canada Work Permit", path: "/workabroad/canada-work-permit" },
     { name: "USA H1b Visa", path: "/workabroad/usa-h1b-visa" },
@@ -114,7 +114,7 @@ const Navbar = () => {
       { name: "Malta", path: "/resume-marketing/malta-resume-marketing" },
     
   ];
-  const Jobseeker = [
+  const jobseeker = [
     { name: "Germany Jobseeker Visa", path: "/jobseeker/germany-jobseeker-visa" },
     { name: "Austria Jobseeker Visa", path: "/jobseeker/canada-jobseeker-visa" },
     { name: "Portugal Jobseeker Visa", path: "/jobseeker/portugal-jobseeker-visa" },
@@ -136,7 +136,7 @@ const Navbar = () => {
     { name: "Legal & Documentation", path: "/services/legal-documentation" },
   ];
   
-  const InvestorvisasSubPages = [
+  const investorvisasSubPages = [
     { name: "USA Investor Visa", path: "/investorvisas/usa-investor-visa"},
     { name: "Canada Investor Visa", path: "/investorvisas/canada-investor-visa"},
     { name: "Germany Investor Visa", path: "/investorvisas/germany-investor-visa" },
@@ -376,15 +376,15 @@ const Navbar = () => {
       item.name === "Migrate To"
         ? migrateSubPages
         :item.name === "Work Abroad"
-        ? WorkabroadSubPages
+        ? workabroadSubPages
         : item.name === "PR Visas"
         ? prVisaSubPages
         : item.name === "Services"
         ? servicesSubPages
         : item.name === "Investor Visas"
-        ? InvestorvisasSubPages
+        ? investorvisasSubPages
         : item.name === "Job Seeker Visas"
-        ? Jobseeker
+        ? jobseeker
         : [] // Fallback
     ).map((subItem) => (
       <Link
@@ -412,25 +412,27 @@ const Navbar = () => {
 </div>
 
 
-<div className="fixed right-2 md:right-0 top-1/3 z-50 flex flex-col space-y-2 md:space-y-3 max-w-[100vw] overflow-hidden">
+<div className="fixed right-2 md:right-0 top-[33vh] z-50 flex flex-col gap-0 max-w-[90vw] w-auto">
   <Link href="/services">
-    <button className="text-white font-bold text-xs sm:text-sm bg-[#A67C52] px-2 sm:px-3 py-4 sm:py-5 md:py-6 shadow-lg rotate-180 [writing-mode:vertical-lr] transition-transform hover:scale-105 hover:bg-[#8D6E4C]">
+    <button className="text-white font-bold text-xs sm:text-sm bg-[#A67C52] px-3 sm:px-4 py-4 sm:py-5 md:py-6 shadow-lg rotate-180 [writing-mode:vertical-lr] transition-transform hover:scale-105 hover:bg-[#8D6E4C]">
       Services
     </button>
   </Link>
 
   <Link href="/assessment">
-    <div className="text-white font-bold text-xs sm:text-sm bg-orange-500 px-2 sm:px-3 py-4 sm:py-5 md:py-6 shadow-lg rotate-180 [writing-mode:vertical-lr] transition-transform hover:scale-105 hover:bg-orange-600">
+    <button className="text-white font-bold text-xs sm:text-sm bg-orange-500 px-3 sm:px-4 py-4 sm:py-5 md:py-6 shadow-lg rotate-180 [writing-mode:vertical-lr] transition-transform hover:scale-105 hover:bg-orange-600">
       Assessment
-    </div>
+    </button>
   </Link>
 
   <Link href="/chat-student">
-    <div className="text-white font-bold text-xs sm:text-sm bg-[#A67C52] px-2 sm:px-3 py-4 sm:py-5 md:py-6 shadow-lg rotate-180 [writing-mode:vertical-lr] transition-transform hover:scale-105 hover:bg-[#8D6E4C]">
+    <button className="text-white font-bold text-xs sm:text-sm bg-[#A67C52] px-3 sm:px-4 py-4 sm:py-5 md:py-6 shadow-lg rotate-180 [writing-mode:vertical-lr] transition-transform hover:scale-105 hover:bg-[#8D6E4C]">
       Contact Us
-    </div>
+    </button>
   </Link>
 </div>
+
+
 
 
 <div className="bg-orange-500 fixed top-12 w-screen z-50 md:hidden block">
