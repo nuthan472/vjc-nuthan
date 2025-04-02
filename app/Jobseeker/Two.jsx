@@ -141,16 +141,19 @@ const Migrate = () => {
               className="space-y-2"
             >
               <p className="text-xl font-semibold text-black">Popular Job Seeker Visa Destinations:</p>
-              <ul className="list-none space-y-2 text-blue-900 text-lg pl-4">
-                <li><a href="/migrate/germany" className="hover:text-black">• Migrate To Germany</a></li>
-                <li><a href="/migrate/canada" className="hover:text-black">• Migrate To Canada</a></li>
-                <li><a href="/migrate/united-states" className="hover:text-black">• Migrate To US</a></li>
-                <li><a href="/migrate/australia" className="hover:text-black">• Migrate To Australia</a></li>
-                <li><a href="/migrate/united-kingdom" className="hover:text-black">• Migrate To UK</a></li>
-                <li><a href="/migrate/new-zealand" className="hover:text-black">• Migrate To New-Zealand</a></li>
-                <li><a href="/migrate/hong-kong" className="hover:text-black">• Migrate To Hong-Kong</a></li>
-                <li><a href="/migrate/south-africa" className="hover:text-black">• Migrate To South-Africa</a></li>
-              </ul>
+              import Link from 'next/link';
+
+<ul className="list-none space-y-2 text-blue-900 text-lg pl-4">
+  <li><Link href="/migrate/germany" className="hover:text-black">• Migrate To Germany</Link></li>
+  <li><Link href="/migrate/canada" className="hover:text-black">• Migrate To Canada</Link></li>
+  <li><Link href="/migrate/united-states" className="hover:text-black">• Migrate To US</Link></li>
+  <li><Link href="/migrate/australia" className="hover:text-black">• Migrate To Australia</Link></li>
+  <li><Link href="/migrate/united-kingdom" className="hover:text-black">• Migrate To UK</Link></li>
+  <li><Link href="/migrate/new-zealand" className="hover:text-black">• Migrate To New-Zealand</Link></li>
+  <li><Link href="/migrate/hong-kong" className="hover:text-black">• Migrate To Hong-Kong</Link></li>
+  <li><Link href="/migrate/south-africa" className="hover:text-black">• Migrate To South-Africa</Link></li>
+</ul>
+
             </motion.div>
           </div>
 
