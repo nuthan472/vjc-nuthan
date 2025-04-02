@@ -76,7 +76,7 @@ const backgroundImages = {
   "dubai-work-permit": "/du.webp",
 };
 
-const WorkabroadCountry = () => {
+const workabroadCountry = () => {
   const router = useRouter();
   const params = useParams();
   const [selectedComponent, setSelectedComponent] = useState(null);
@@ -155,4 +155,4 @@ const WorkabroadCountry = () => {
   );
 };
 
-export default WorkabroadCountry;
+export default workabroadCountry;
