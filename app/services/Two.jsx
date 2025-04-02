@@ -29,7 +29,7 @@ export default function Two() {
      {/* 🔹 Extra Space for Small Screens Only */}
      <div className="block sm:hidden lg:block h-16"></div>
 
- <section className="w-full overflow-hidden py-4 bg-gray-100">
+ <section className="w-full overflow-hidden py-4 ">
   <Marquee speed={60} pauseOnHover={true} gradient={true} gradientWidth={50}>
     {[
       { src: "/usa.svg", alt: "USA" },
@@ -37,9 +37,12 @@ export default function Two() {
       { src: "/aus1.jpg", alt: "Australia" },
       { src: "/uk-flag.png", alt: "UK" },
       { src: "/germany.svg", alt: "Germany" },
-      { src: "/france.svg", alt: "France" },
-      { src: "/th.jpg", alt: "Italy" },
-      { src: "/dubai.svg", alt: "Dubai" },
+      { src: "/usa.svg", alt: "USA" },
+      { src: "/uk-flag.png", alt: "UK" },
+      { src: "/aus1.jpg", alt: "Australia" },
+      { src: "/uk-flag.png", alt: "UK" },
+      { src: "/germany.svg", alt: "Germany" },
+      
     ].map((country, index) => (
         <div key={index} className="flex flex-col items-center">
         <Image
@@ -47,7 +50,7 @@ export default function Two() {
           alt={country.alt}
           width={120}
           height={80}
-          className="max-w-[100px] gap-x-6 mx-4 sm:max-w-[120px] h-auto rounded-md shadow-lg hover:scale-110 transition-transform duration-300"
+          className="w-full max-w-[100px] gap-x-6  mx-4 sm:max-w-[120px] h-auto rounded-md shadow-lg hover:scale-110 transition-transform duration-300"
         />
         <p className="text-xs sm:text-sm gap-x-6 font-semibold mt-1 sm:mt-2 text-blue-600 text-center">
           {country.alt}

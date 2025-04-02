@@ -27,7 +27,7 @@ const Navbar = () => {
     { name: "Investor Visas", path: "/investorvisas" },
     { name: "Schengen Visas", path: "/schengen" },
     { name: "Resume Marketing", path: "/resume-marketing" },
-    { name: "Coaching/Training", path: "/" },
+    { name: "Coaching/Training", path: "/coaching" },
    
   ];
   const fixedItems = [
@@ -49,6 +49,16 @@ const Navbar = () => {
     { name: "Hong Kong", path: "/migrate/hong-kong" },
     { name: "Denmark", path: "/migrate/denmark" },
     { name: "UAE", path: "/migrate/uae" },
+  ];
+  
+  const coachingSubPages = [
+    { name: "IELTS", path: "/ielts" },
+    { name: "GMAT", path: "/gmat" },
+    { name: "GRE", path: "/gre" },
+    { name: "DUOLINGO", path: "/duolingo" },
+    { name: "PTE", path: "/pte" },
+    { name: "TOEFL", path: "/toefl" },
+  
   ];
   
   const workabroadSubPages = [
@@ -358,6 +368,27 @@ const Navbar = () => {
                 ))}
               </div>
             </div>
+          ) : item.name === "Coaching/Training" ? (
+            <div className="relative group">
+              <Link
+                href={item.path}
+                className="text-white text-sm lg:text-xs font-semibold px-3.5 hover:bg-white hover:bg-opacity-20 uppercase mt-2"
+              >
+                {item.name}
+              </Link>
+             {/* Visit Visas Submenu - OPEN TO LEFT */}
+             <div className="absolute right-0 mt-3 invisible opacity-0 bg-gradient-to-br from-orange-500/60 to-black group-hover:visible group-hover:opacity-100 hover:visible hover:opacity-100 grid grid-cols-6 gap-2 bg-black bg-opacity-50 p-3 w-[600px] min-h-[100px] shadow-xl z-50 transition-all duration-300 ease-in-out">
+                {coachingSubPages.map((subItem) => (
+                  <Link
+                    href={subItem.path}
+                    key={subItem.name}
+                    className="text-white text-sm font-semibold text-center px-3 py-2 hover:text-orange-500 hover:bg-white hover:bg-opacity-10 transition duration-200 ease-in-out whitespace-normal break-words"
+                  >
+                    {subItem.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
           ) : (
             <div className="relative group">
               <Link
@@ -365,7 +396,7 @@ const Navbar = () => {
                 className="text-white text-sm lg:text-xs font-semibold px-3.5  uppercase mt-1"
               >
                 {item.name}
-              </Link>   
+              </Link>
 
 
 
@@ -412,21 +443,21 @@ const Navbar = () => {
 </div>
 
 
-<div className="fixed right-2 md:right-0 top-[33vh] z-50 flex flex-col gap-0 max-w-[90vw] w-auto">
+<div className="fixed right-2 md:right-0 bottom-20 md:top-[30vh] z-50 flex flex-col max-w-[100vw] w-auto md:w-[50px]">
   <Link href="/services">
-    <button className="text-white font-bold text-xs sm:text-sm bg-[#A67C52] px-3 sm:px-4 py-4 sm:py-5 md:py-6 shadow-lg rotate-180 [writing-mode:vertical-lr] transition-transform hover:scale-105 hover:bg-[#8D6E4C]">
+    <button className="text-white font-bold text-xs sm:text-sm bg-[#A67C52] px-3 sm:px-4 py-3 sm:py-4 md:py-6 shadow-lg rotate-180 [writing-mode:vertical-lr] transition-transform hover:scale-105 hover:bg-[#8D6E4C]">
       Services
     </button>
   </Link>
 
   <Link href="/assessment">
-    <button className="text-white font-bold text-xs sm:text-sm bg-orange-500 px-3 sm:px-4 py-4 sm:py-5 md:py-6 shadow-lg rotate-180 [writing-mode:vertical-lr] transition-transform hover:scale-105 hover:bg-orange-600">
+    <button className="text-white font-bold text-xs sm:text-sm bg-orange-500 px-3 sm:px-4 py-3 sm:py-4 md:py-6 shadow-lg rotate-180 [writing-mode:vertical-lr] transition-transform hover:scale-105 hover:bg-orange-600">
       Assessment
     </button>
   </Link>
 
   <Link href="/chat-student">
-    <button className="text-white font-bold text-xs sm:text-sm bg-[#A67C52] px-3 sm:px-4 py-4 sm:py-5 md:py-6 shadow-lg rotate-180 [writing-mode:vertical-lr] transition-transform hover:scale-105 hover:bg-[#8D6E4C]">
+    <button className="text-white font-bold text-xs sm:text-sm bg-[#A67C52] px-3 sm:px-4 py-3 sm:py-4 md:py-6 shadow-lg rotate-180 [writing-mode:vertical-lr] transition-transform hover:scale-105 hover:bg-[#8D6E4C]">
       Contact Us
     </button>
   </Link>
