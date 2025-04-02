@@ -21,7 +21,7 @@ const Navbar = () => {
     { name: "Study Abroad", path: "/studyabroad" },
     { name: "PR Visas", path: "/PR-visas" },
     { name: "Work Abroad", path: "/Workabroad" },
-    { name: "Job Seeker Visas", path: "/Jobseeker" },
+    { name: "Job Seeker Visas", path: "/jobseeker" },
     
     { name: "Visit Visas", path: "/visitvisas" },
     { name: "Investor Visas", path: "/Investorvisas" },
