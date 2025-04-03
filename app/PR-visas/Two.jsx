@@ -5,39 +5,15 @@ import { useRouter, usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Form from "./Form";
-import Content from "./Content"; // ✅ Import Content component
+import Content from "./Content"; // ✅ Ensure Content is imported correctly
 
 const visaData = [
-  {
-    name: "Canada Permanent Residency Visa",
-    path: "/pr-visas/canadapr",
-    image: "/1.jpg",
-  },
-  {
-    name: "Australia Permanent Residency Visa",
-    path: "/pr-visas/australiapr",
-    image: "/airplane.png",
-  },
-  {
-    name: "UK Permanent Residency Visa",
-    path: "/pr-visas/ukpr",
-    image: "/dmbusi.jpg",
-  },
-  {
-    name: "New Zealand Permanent Residency Visa",
-    path: "/pr-visas/newzealandpr",
-    image: "/images/newzealand.jpg",
-  },
-  {
-    name: "Germany Blue Card Visa",
-    path: "/pr-visas/germanybluecard",
-    image: "/images/germany.jpg",
-  },
-  {
-    name: "USA Green Card",
-    path: "/pr-visas/usagreencard",
-    image: "/images/usa.jpg",
-  },
+  { name: "Canada Permanent Residency Visa", path: "/pr-visas/canadapr", image: "/1.jpg" },
+  { name: "Australia Permanent Residency Visa", path: "/pr-visas/australiapr", image: "/airplane.png" },
+  { name: "UK Permanent Residency Visa", path: "/pr-visas/ukpr", image: "/dmbusi.jpg" },
+  { name: "New Zealand Permanent Residency Visa", path: "/pr-visas/newzealandpr", image: "/images/newzealand.jpg" },
+  { name: "Germany Blue Card Visa", path: "/pr-visas/germanybluecard", image: "/images/germany.jpg" },
+  { name: "USA Green Card", path: "/pr-visas/usagreencard", image: "/images/usa.jpg" },
 ];
 
 const defaultVisa = {
@@ -63,6 +39,7 @@ const Migrate = () => {
   const handleVisaClick = (visa) => {
     setSelectedVisa(visa);
     router.push(visa.path);
+    console.log("Visa Selected:", visa); // ✅ Debugging
   };
 
   return (
@@ -126,16 +103,10 @@ const Migrate = () => {
 
           {/* Description Section (Visa Info Content Box) */}
           <div
-            className="w-full md:w-2/3 p-4 sm:p-5 rounded-xl border border-gray-300 shadow-md -mt-12 sm:-mt-20 lg:-mt-24"
+            className="w-full md:w-2/3 p-4 sm:p-5 rounded-xl border border-gray-300 shadow-md"
             style={{ maxHeight: "750px", minHeight: "480px", overflowY: "auto" }}
           >
-            {selectedVisa.path === defaultVisa.path ? (
-              <div className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                <Content selectedVisa={selectedVisa} />
-              </div>
-            ) : (
-              <Content selectedVisa={selectedVisa} />
-            )}
+            <Content selectedVisa={selectedVisa} />
           </div>
         </div>
       </div>

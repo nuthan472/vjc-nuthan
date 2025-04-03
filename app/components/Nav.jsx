@@ -21,11 +21,11 @@ const Navbar = () => {
     { name: "Study Abroad", path: "/studyabroad" },
     { name: "PR Visas", path: "/pr-visas" },
     { name: "Work Abroad", path: "/workabroad" },
-    { name: "Job Seeker Visas", path: "/jobseeker" },
+    { name: "Job Seeker Visas", path: "/jobseeker-visas" },
     
     { name: "Visit Visas", path: "/visitvisas" },
-    { name: "Investor Visas", path: "/investorvisas" },
-    { name: "Schengen Visas", path: "/schengen" },
+    { name: "Investor Visas", path: "/investor-visas" },
+    { name: "Schengen Visas", path: "/schengen-visas" },
     { name: "Resume Marketing", path: "/resume-marketing" },
     { name: "Coaching/Training", path: "/coaching" },
    
@@ -125,12 +125,12 @@ const Navbar = () => {
     
   ];
   const jobseeker = [
-    { name: "Germany Jobseeker Visa", path: "/jobseeker/germany-jobseeker-visa" },
-    { name: "Austria Jobseeker Visa", path: "/jobseeker/canada-jobseeker-visa" },
-    { name: "Portugal Jobseeker Visa", path: "/jobseeker/portugal-jobseeker-visa" },
-    { name: "Sweden Jobseeker Visa", path: "/jobseeker/sweden-jobseeker-visa" },
-    { name: "Norway Jobseeker Visa", path: "/jobseeker/norway-jobseeker-visa" },
-    { name: "UAE Jobseeker Visa", path: "/jobseeker/uae-jobseeker-visa" },
+    { name: "Germany Jobseeker Visa", path: "/jobseeker-visas/germany-jobseeker-visa" },
+    { name: "Austria Jobseeker Visa", path: "/jobseeker-visas/austria-jobseeker-visa" },
+    { name: "Portugal Jobseeker Visa", path: "/jobseeker-visas/portugal-jobseeker-visa" },
+    { name: "Sweden Jobseeker Visa", path: "/jobseeker-visas/sweden-jobseeker-visa" },
+    { name: "Norway Jobseeker Visa", path: "/jobseeker-visas/norway-jobseeker-visa" },
+    { name: "UAE Jobseeker Visa", path: "/jobseeker-visas/uae-jobseeker-visa" },
    
   ];
   const servicesSubPages = [
@@ -147,14 +147,14 @@ const Navbar = () => {
   ];
   
   const investorvisasSubPages = [
-    { name: "USA Investor Visa", path: "/investorvisas/usa-investor-visa"},
-    { name: "Canada Investor Visa", path: "/investorvisas/canada-investor-visa"},
-    { name: "Germany Investor Visa", path: "/investorvisas/germany-investor-visa" },
-    { name: "Australia Investor Visa", path: "/investorvisas/australia-investor-visa"},
-    { name: "UK Investor Visa", path: "/investorvisas/uk-investor-visa" },
-    { name: "UAE Investor Visa", path: "/investorvisas/uae-investor-visa"},
-    { name: "Portugal Investor Visa", path: "/investorvisas/portugal-investor-visa" },
-    { name: "Austria Investor Visa", path: "/investorvisas/austria-investor-visa" },
+    { name: "USA Investor Visa", path: "/investor-visas/usa-investor-visa"},
+    { name: "Canada Investor Visa", path: "/investor-visas/canada-investor-visa"},
+    { name: "Germany Investor Visa", path: "/investor-visas/germany-investor-visa" },
+    { name: "Australia Investor Visa", path: "/investor-visas/australia-investor-visa"},
+    { name: "UK Investor Visa", path: "/investor-visas/uk-investor-visa" },
+    { name: "UAE Investor Visa", path: "/investor-visas/uae-investor-visa"},
+    { name: "Portugal Investor Visa", path: "/investor-visas/portugal-investor-visa" },
+    { name: "Austria Investor Visa", path: "/investor-visas/austria-investor-visa" },
    
   ];
   const visitvisasSubPages = [
@@ -173,35 +173,35 @@ const Navbar = () => {
    
   ];
   const schengenSubPages = [
-    { name: "Austria ", path: "/schengen/austria",},
-    { name: "Belgium ", path: "/schengen/belgium", },
-    { name: "Bulgaria ", path: "/schengen/bulgaria",  },
-    { name: "Croatia ", path: "/schengen/croatia",  },
-    { name: "Czech Republic ", path: "/schengen/czech-republic",},
-    { name: "Denmark ", path: "/schengen/denmark",  },
-    { name: "Estonia ", path: "/schengen/estonia",  },
-    { name: "Finland ", path: "/schengen/finland",  },
-    { name: "France ", path: "/schengen/france",  },
-    { name: "Germany ", path: "/schengen/germany",},
-    { name: "Greece ", path: "/schengen/greece",  },
-    { name: "Hungary ", path: "/schengen/hungary",  },
-    { name: "Iceland ", path: "/schengen/iceland",  },
-    { name: "Italy ", path: "/schengen/italy",  },
-    { name: "Latvia ", path: "/schengen/latvia", },
-    { name: "Liechtenstein ", path: "/schengen/liechtenstein", },
-    { name: "Lithuania ", path: "/schengen/lithuania", },
-    { name: "Luxembourg ", path: "/schengen/luxembourg",},
-    { name: "Malta ", path: "/schengen/malta",},
-    { name: "Netherlands ", path: "/schengen/netherlands",},
-    { name: "Norway ", path: "/schengen/norway", },
-    { name: "Poland ", path: "/schengen/poland", },
-    { name: "Portugal ", path: "/schengen/portugal",  },
-    { name: "Romania ", path: "/schengen/romania",  },
-    { name: "Slovakia ", path: "/schengen/slovakia", },
-    { name: "Slovenia ", path: "/schengen/slovenia",  },
-    { name: "Spain ", path: "/schengen/spain", },
-    { name: "Sweden ", path: "/schengen/sweden",},
-    { name: "Switzerland ", path: "/schengen/switzerland", },
+    { name: "Austria ", path: "/schengen-visas/austria",},
+    { name: "Belgium ", path: "/schengen-visas/belgium", },
+    { name: "Bulgaria ", path: "/schengen-visas/bulgaria",  },
+    { name: "Croatia ", path: "/schengen-visas/croatia",  },
+    { name: "Czech Republic ", path: "/schengen-visas/czech-republic",},
+    { name: "Denmark ", path: "/schengen-visas/denmark",  },
+    { name: "Estonia ", path: "/schengen-visas/estonia",  },
+    { name: "Finland ", path: "/schengen-visas/finland",  },
+    { name: "France ", path: "/schengen-visas/france",  },
+    { name: "Germany ", path: "/schengen-visas/germany",},
+    { name: "Greece ", path: "/schengen-visas/greece",  },
+    { name: "Hungary ", path: "/schengen-visas/hungary",  },
+    { name: "Iceland ", path: "/schengen-visas/iceland",  },
+    { name: "Italy ", path: "/schengen-visas/italy",  },
+    { name: "Latvia ", path: "/schengen-visas/latvia", },
+    { name: "Liechtenstein ", path: "/schengen-visas/liechtenstein", },
+    { name: "Lithuania ", path: "/schengen-visas/lithuania", },
+    { name: "Luxembourg ", path: "/schengen-visas/luxembourg",},
+    { name: "Malta ", path: "/schengen-visas/malta",},
+    { name: "Netherlands ", path: "/schengen-visas/netherlands",},
+    { name: "Norway ", path: "/schengen-visas/norway", },
+    { name: "Poland ", path: "/schengen-visas/poland", },
+    { name: "Portugal ", path: "/schengen-visas/portugal",  },
+    { name: "Romania ", path: "/schengen-visas/romania",  },
+    { name: "Slovakia ", path: "/schengen-visas/slovakia", },
+    { name: "Slovenia ", path: "/schengen-visas/slovenia",  },
+    { name: "Spain ", path: "/schengen-visas/spain", },
+    { name: "Sweden ", path: "/schengen-visas/sweden",},
+    { name: "Switzerland ", path: "/schengen-visas/switzerland", },
    
   ];
   

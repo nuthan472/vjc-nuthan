@@ -9,12 +9,12 @@ import { X } from "lucide-react";
 import Link from 'next/link';
 
 const visaData = [
-  { name: "Germany Job Seeker Visa", path: "/jobseeker/germany-jobseeker-visa" },
-  { name: "Austria Job Seeker Visa", path: "/jobseeker/austria-jobseeker-visa" },
-  { name: "Portugal Job Seeker Visa", path: "/jobseeker/portugal-jobseeker-visa" },
-  { name: "Sweden Job Seeker Visa", path: "/jobseeker/sweden-jobseeker-visa" },
-  { name: "Norway Job Seeker Visa", path: "/jobseeker/norway-jobseeker-visa" },
-  { name: "UAE Job Seeker Visa", path: "/jobseeker/uae-jobseeker-visa" },
+  { name: "Germany Job Seeker Visa", path: "/jobseeker-visas/germany-jobseeker-visa" },
+  { name: "Austria Job Seeker Visa", path: "/jobseeker-visas/austria-jobseeker-visa" },
+  { name: "Portugal Job Seeker Visa", path: "/jobseeker-visas/portugal-jobseeker-visa" },
+  { name: "Sweden Job Seeker Visa", path: "/jobseeker-visas/sweden-jobseeker-visa" },
+  { name: "Norway Job Seeker Visa", path: "/jobseeker-visas/norway-jobseeker-visa" },
+  { name: "UAE Job Seeker Visa", path: "/jobseeke-visas/uae-jobseeker-visa" },
 ];
 
 const defaultVisa = {
